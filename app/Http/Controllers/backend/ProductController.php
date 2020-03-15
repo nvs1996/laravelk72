@@ -12,7 +12,7 @@ class ProductController extends Controller
     //Get List product
     public function ListProduct()
     {
-        $data['products']=product::paginate(4);
+        $data['products']=product::orderBy("id", "DESC")->paginate(4);
         return view('backend.product.listproduct',$data);
     }
 
@@ -41,17 +41,45 @@ class ProductController extends Controller
         {
             $product->img='no-img.jpg';
         }
-       
-        $product->category_id=$request->category;
-        $product->state=$request->product_state;
-        $product->info=$request->info;
-        $product->describe=$request->description;
+        //anh 2
+        if($request->hasFile('product_img2'))
+        {
+            $file = $request->product_img2;
+            $filename= str_random(9).'.'.$file->getClientOriginalExtension();
+            $file->move('public/backend/img', $filename);
+            $product->img2=$filename;
+        }
+        else
+        {
+            $product->img2='no-img.jpg';
+        }
+        //anh 3
+        if($request->hasFile('product_img3'))
+        {
+            $file = $request->product_img3;
+            $filename= str_random(9).'.'.$file->getClientOriginalExtension();
+            $file->move('public/backend/img', $filename);
+            $product->img3=$filename;
+        }
+        else
+        {
+            $product->img3='no-img.jpg';
+        }
+        $product->category_id = $request->category;
+        $product->state = $request->product_state;
+        $product->info = $request->info;
+        $product->info1 = $request->info1;
+        $product->info2 = $request->info2;
+        $product->info3 = $request->info3;
+        $product->info4 = $request->info4;
+        $product->info5 = $request->info5;
+        $product->info6 = $request->info6;
+        $product->describe = $request->description;
         $product->save();
 
         
         //add values_product
         $product->values()->Attach(Arr::collapse($request->value));
-
         //add variant
         foreach(get_combinations($request->value) as $variant)
         {
@@ -60,7 +88,7 @@ class ProductController extends Controller
             $vari->save();
             $vari->values()->attach($variant);
         }
-        return redirect('admin/product/add-variant/'.$product->id);
+        return redirect('admin/product');
     }
 
 
@@ -159,11 +187,32 @@ class ProductController extends Controller
             $file->move('public/backend/img', $filename);
             $product->img=$filename;
         }
-
+        //anh 2
+        if($request->hasFile('product_img2'))
+        {
+            $file = $request->product_img2;
+            $filename= str_random(9).'.'.$file->getClientOriginalExtension();
+            $file->move('public/backend/img', $filename);
+            $product->img2=$filename;
+        }
+        //anh 3
+        if($request->hasFile('product_img3'))
+        {
+            $file = $request->product_img3;
+            $filename= str_random(9).'.'.$file->getClientOriginalExtension();
+            $file->move('public/backend/img', $filename);
+            $product->img3=$filename;
+        }
         $product->category_id=$request->category;
-        $product->state=$request->product_state;
-        $product->info=$request->info;
-        $product->describe=$request->description;
+        $product->state = $request->product_state;
+        $product->info = $request->info;
+        $product->info1 = $request->info1;
+        $product->info2 = $request->info2;
+        $product->info3 = $request->info3;
+        $product->info4 = $request->info4;
+        $product->info5 = $request->info5;
+        $product->info6 = $request->info6;
+        $product->describe = $request->description;
         $product->save();
 
         
@@ -182,8 +231,7 @@ class ProductController extends Controller
             }
            
         }
-
-        return redirect('admin/product/edit-variant/'.$product->id);
+        return redirect('admin/product');
      }
 
 

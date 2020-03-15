@@ -18,6 +18,8 @@ class product extends Model
     // protected $primaryKey = 'idproduct';
     // Bảng không sử dụng timestamps
     // public $timestamps =false;
+    // protected $fillable = [
+    //     'id','product_code','name','price','state','info','info1','info2','info3','info4','info5','info6','describe','img','img2','img3','category_id'];
 
     public function category()
     {

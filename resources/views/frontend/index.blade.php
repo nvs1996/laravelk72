@@ -11,74 +11,48 @@
 </style>
 </head>
 <body>
-		<div id="colorlib-featured-product" style="margin-top: 20px;">
+		<div id="colorlib-featured-product">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6">
-							<div class="w3-content w3-section" style="max-width:700px">
-							<img class="mySlides" src="public/frontend/images/blog-3.jpg" style="width:100%">
-							<img class="mySlides" src="public/frontend/images/blog-1.jpg" style="width:100%">
-							<img class="mySlides" src="public/frontend/images/blog-2.jpg" style="width:100%">
+							<div class="slideshow">
+								<div class="w3-content w3-section">
+									<img class="mySlides w3-animate-fading image" src="public/frontend/images/blog-3.jpg">
+									<img class="mySlides w3-animate-fading image" src="public/frontend/images/blog-1.jpg">
+									<img class="mySlides w3-animate-fading image" src="public/frontend/images/blog-2.jpg">
+							</div>
 						</div>
 					</div>
 					<div class="col-md-6">
 						<div class="row">
 							<div class="col-md-12">
-								<a href="" class="f-product-2" style="background-image: url(public/frontend/images/blog-3.jpg);">
+								<!-- <a href="" class="f-product-2" style="background-image: url(public/frontend/images/blog-3.jpg);">
 									<div class="desc">
 										<h2>Tin <br>tức <br>Cnd</h2>
 									</div>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	
-		<div id="colorlib-intro" class="colorlib-intro" style="background-image: url(public/frontend/images/cover-img-1.jpg);"
-		 data-stellar-background-ratio="0.5">
-			<div class="overlay"></div>
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6">
-						<div class="intro-desc">
-							<div class="text-salebox">
-								<div class="text-lefts">
-									<div class="sale-box">
-										<div class="sale-box-top">
-											<h2 class="number">45</h2>
-											<span class="sup-1">%</span>
-											<span class="sup-2">Off</span>
-										</div>
-										<h2 class="text-sale">Sale</h2>
+								</a> -->
+								<h2 class="h2noti">Các tin tức mới nhất của CND</h2>
+								@foreach ($notifications as $notification)
+									<div class="notifition">
+										<li style="font-family: Courier New"> {{ $notification->title }}</li>
 									</div>
-								</div>
-								<div class="text-rights">
-									<h3 class="title">CND Company SALE OFF: Just hurry up limited offer!</h3>
-									<p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-									<p><a href="shop.html" class="btn btn-primary">Shop Now</a> <a href="#" class="btn btn-primary btn-outline">Read
-											more</a></p>
-								</div>
+								@endforeach
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-
 		<div class="colorlib-shop">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6 col-md-offset-3 text-center colorlib-heading">
-						<h2><span>Sản phẩm được quan tâm nhiều nhất</span></h2>
-						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, debitis? Eaque fugiat quisquam beatae sunt
-							similique obcaecati cupiditate saepe ab minus, praesentium velit inventore vitae repellat? Nisi repellendus sit
-							deserunt.</p>
+						<h2><span> Sản phẩm được quan tâm nhiều nhất </span></h2>
 					</div>
 				</div>
 				<div class="row">
-					@foreach ($products as $product)
+					@foreach ($product_80s as $product)
+					<h3 class="upercase"><a href="product_by_category/{{ $product->category->id }}">Sản phẩm gạch 800*800</a></h3>
 						<div class="col-md-3 text-center">
 						<div class="product-entry">
 							<div class="product-img" style="background-image: url(public/backend/img/{{ $product->img }});">
@@ -99,8 +73,93 @@
 						</div>
 						</div>
 					@endforeach
-					
-					
+				</div>
+				<div class="row">
+					<h3 class="upercase">Sản phẩm gạch 600*600</h3>
+					@foreach ($product_60s as $product)
+						<div class="col-md-3 text-center">
+						<div class="product-entry">
+							<div class="product-img" style="background-image: url(public/backend/img/{{ $product->img }});">
+								<p class="tag"><span class="new">New</span></p>
+								<div class="cart">
+									<p>
+										<!-- <span class="addtocart"><a href="product/detail/{{ $product->id }}"><i class="icon-shopping-cart"></i></a></span> -->
+										<span><a href="product/detail/{{ $product->id }}"><i class="icon-eye"></i></a></span>
+										
+
+									</p>
+								</div>
+							</div>
+							<div class="desc">
+								<h3><a href="product/detail/{{ $product->id }}">{{ $product->name }}</a></h3>
+								<p class="price"><span>{{number_format( $product->price,0,'',',') }} đ</span></p>
+							</div>
+						</div>
+						</div>
+					@endforeach
+				</div>
+				<div class="row">
+					<h3 class="upercase">Sản phẩm gạch nền 300*300</h3>
+					@foreach ($product_30s_gach_nen as $product_30_gach_nen)
+						<div class="col-md-3 text-center">
+						<div class="product-entry">
+							<div class="product-img" style="background-image: url(public/backend/img/{{ $product->img }});">
+								<p class="tag"><span class="new">New</span></p>
+								<div class="cart">
+									<p>
+										<span><a href="product/detail/{{ $product_30_gach_nen->id }}"><i class="icon-eye"></i></a></span>
+									</p>
+								</div>
+							</div>
+							<div class="desc">
+								<h3><a href="product/detail/{{ $product_30_gach_nen->id }}">{{ $product_30_gach_nen->name }}</a></h3>
+								<p class="price"><span>{{number_format( $product_30_gach_nen->price,0,'',',') }} đ</span></p>
+							</div>
+						</div>
+						</div>
+					@endforeach
+				</div>
+				<div class="row">
+					<h3 class="upercase">Sản phẩm gạch ốp 300*600</h3>
+					@foreach ($product_30s_gach_op as $product_30_gach_op)
+						<div class="col-md-3 text-center">
+						<div class="product-entry">
+							<div class="product-img" style="background-image: url(public/backend/img/{{ $product_30_gach_op->img }});">
+								<p class="tag"><span class="new">New</span></p>
+								<div class="cart">
+									<p>
+										<span><a href="product/detail/{{ $product_30_gach_op->id }}"><i class="icon-eye"></i></a></span>
+									</p>
+								</div>
+							</div>
+							<div class="desc">
+								<h3><a href="product/detail/{{ $product_30_gach_op->id }}">{{ $product_30_gach_op->name }}</a></h3>
+								<p class="price"><span>{{number_format( $product_30_gach_op->price,0,'',',') }} đ</span></p>
+							</div>
+						</div>
+						</div>
+					@endforeach
+				</div>
+				<div class="row">
+					<h3 class="upercase">Sản phẩm gạch gỗ thanh 150*800</h3>
+					@foreach ($product_go_thanh as $product)
+						<div class="col-md-3 text-center">
+						<div class="product-entry">
+							<div class="product-img" style="background-image: url(public/backend/img/{{ $product->img }});">
+								<p class="tag"><span class="new">New</span></p>
+								<div class="cart">
+									<p>
+										<span><a href="product/detail/{{ $product->id }}"><i class="icon-eye"></i></a></span>
+									</p>
+								</div>
+							</div>
+							<div class="desc">
+								<h3><a href="product/detail/{{ $product->id }}">{{ $product->name }}</a></h3>
+								<p class="price"><span>{{number_format( $product->price,0,'',',') }} đ</span></p>
+							</div>
+						</div>
+						</div>
+					@endforeach
 				</div>
 			</div>
 		</div>
@@ -118,7 +177,8 @@ function carousel() {
   myIndex++;
   if (myIndex > x.length) {myIndex = 1}    
   x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 2000); // Change image every 2 seconds
+  setTimeout(carousel, 9000);    
 }
 </script>
+
 @endsection

@@ -29,6 +29,7 @@ Route::get('project-detail/{id}','frontend\ProjectController@GetProjectDetail');
 Route::get('lien-he','frontend\indexController@LienHe');
 Route::get('contact','frontend\indexController@GetIndex');
 Route::get('search','frontend\SearchController@GetKey')->name('search.product');
+Route::get('product_by_category/{id}','frontend\ProductByCategoryController@GetKey')->name('category.by.product');
 Route::group(['prefix' => 'product','namespace'=>'frontend'], function () {
     Route::get('','ProductController@GetProduct');
     Route::get('detail/{id_product}','ProductController@GetDetail');
@@ -73,6 +74,16 @@ Route::group(['prefix' => 'admin','middleware'=>'CheckLogout','namespace'=>'back
         Route::post('project/update/{id}', 'ProjectController@ProjectUpdate')->name('project.update');
         Route::get('project/edit/{id}', 'ProjectController@ProjectEdit')->name('project.edit');
         Route::any('project/{id}/destroy','ProjectController@ProjectDestroy')->name('project.destroy');
+    });
+
+    // slide
+    Route::group(['prefix' => 'slide'], function () {
+        Route::get('index', 'ProjectController@index')->name('slide.index');
+        Route::get('slide/create', 'SlideController@SlideCreate')->name('slide.create');
+        Route::post('slide/store', 'SlideController@SlideStore')->name('slide.store');
+        Route::post('slide/update/{id}', 'SlideController@SlideUpdate')->name('slide.update');
+        Route::get('slide/edit/{id}', 'SlideController@SlideEdit')->name('slide.edit');
+        Route::any('slide/{id}/destroy','SlideController@SlideDestroy')->name('slide.destroy');
     });
      // construction
     Route::group(['prefix' => 'construction'], function () {

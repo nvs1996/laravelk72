@@ -65,12 +65,12 @@
 			<li @yield('project')><a href="admin/project/index"><svg class="glyph stroked notepad ">
 				<use xlink:href="#stroked-notepad" />
 				</svg> Quản lý dự án </a></li>
-			<li @yield('project')><a href="admin/construction/index"><svg class="glyph stroked notepad ">
+			<li @yield('construction')><a href="admin/construction/index"><svg class="glyph stroked notepad ">
 				<use xlink:href="#stroked-notepad" />
 				</svg> Quản lý công trình </a></li>	
-			<!-- <li @yield('field') class="has-dropdown"><a href="#"><svg class="glyph stroked two messages">
-				<use xlink:href="#stroked-two-messages" />
-				</svg> Quản lý lĩnh vực khác</a></li> -->
+			<li @yield('slide')><a href="admin/slide/index"><svg class="glyph stroked notepad ">
+				<use xlink:href="#stroked-notepad" />
+				</svg> Quản lý ảnh slideshow </a></li>	
 			<div class="dropdown">
 			 	<button class="dropbtn"><i class="fa fa-bars" style="padding-right: 16px; margin-left: -10px; "></i>Quản lý lĩnh vực khác</button>
 		 		<div class="dropdown-content">

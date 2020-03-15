@@ -77,18 +77,22 @@ class ProductController extends Controller
     }
 
 
-
     public function AddCart(request $request)
     {
-        $product=product::find($request->id_product);
-        Cart::add([
-        'id' => $product->product_code, 
-        'name' => $product->name, 
-        'qty' => $request->quantity, 
-        'price' => GetPrice($product,$request->attr), 
-        'options' => ['img' => $product->img,'attr'=>$request->attr]]);
-        return redirect('product/cart');
+        return redirect('lien-he');
     }
+
+    // public function AddCart(request $request)
+    // {
+    //     $product=product::find($request->id_product);
+    //     Cart::add([
+    //     'id' => $product->product_code, 
+    //     'name' => $product->name, 
+    //     'qty' => $request->quantity, 
+    //     'price' => GetPrice($product,$request->attr), 
+    //     'options' => ['img' => $product->img,'attr'=>$request->attr]]);
+    //     return redirect('product/cart');
+    // }
     public function GetCart()
     {
      
