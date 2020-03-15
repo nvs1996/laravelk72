@@ -75,7 +75,7 @@
 					@endforeach
 				</div>
 				<div class="row">
-					<h3 class="upercase"><a href="product_by_category/{{ $product->category->id }}"Sản phẩm gạch 600*600</h3>
+					<h3 class="upercase"><a href="product_by_category/{{ $product->category->id }}">Sản phẩm gạch 600*600</h3>
 					@foreach ($product_60s as $product)
 						<div class="col-md-3 text-center">
 						<div class="product-entry">
@@ -99,7 +99,7 @@
 					@endforeach
 				</div>
 				<div class="row">
-					<h3 class="upercase"><a href="product_by_category/{{ $product->category->id }}"Sản phẩm gạch nền 300*300</h3>
+					<h3 class="upercase"><a href="product_by_category/{{ $product->category->id }}">Sản phẩm gạch nền 300*300</h3>
 					@foreach ($product_30s_gach_nen as $product_30_gach_nen)
 						<div class="col-md-3 text-center">
 						<div class="product-entry">
@@ -120,7 +120,7 @@
 					@endforeach
 				</div>
 				<div class="row">
-					<h3 class="upercase"><a href="product_by_category/{{ $product->category->id }}"Sản phẩm gạch ốp 300*600</h3>
+					<h3 class="upercase"><a href="product_by_category/{{ $product->category->id }}">Sản phẩm gạch ốp 300*600</h3>
 					@foreach ($product_30s_gach_op as $product_30_gach_op)
 						<div class="col-md-3 text-center">
 						<div class="product-entry">
@@ -141,7 +141,7 @@
 					@endforeach
 				</div>
 				<div class="row">
-					<h3 class="upercase"><a href="product_by_category/{{ $product->category->id }}"Sản phẩm gạch gỗ thanh 150*800</h3>
+					<h3 class="upercase"><a href="product_by_category/{{ $product->category->id }}">Sản phẩm gạch gỗ thanh 150*800</h3>
 					@foreach ($product_go_thanh as $product)
 						<div class="col-md-3 text-center">
 						<div class="product-entry">
