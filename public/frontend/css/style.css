@@ -81,7 +81,7 @@ h1, h2, h3, h4, h5, h6, figure {
 
 .colorlib-nav .top-menu {
   margin-top: 20px;
-  background-color: #DEB887;
+  background-color: #DCDCDC;
   padding: 5px 30px ; }
   @media screen and (max-width: 768px) {
     .colorlib-nav .top-menu {
@@ -2452,4 +2452,9 @@ img {vertical-align: middle;}
 .upercase {
   text-transform: uppercase;
   font-weight: 10px;
+}
+.fix_icon_eye_index {
+  height: 40px;
+  background-color: white;
+  padding: 1em;
 }

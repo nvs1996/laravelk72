@@ -61,8 +61,6 @@
 									<p>
 										<!-- <span class="addtocart"><a href="product/detail/{{ $product->id }}"><i class="icon-shopping-cart"></i></a></span> -->
 										<span><a href="product/detail/{{ $product->id }}"><i class="icon-eye"></i></a></span>
-										
-
 									</p>
 								</div>
 							</div>
@@ -83,10 +81,7 @@
 								<p class="tag"><span class="new">New</span></p>
 								<div class="cart">
 									<p>
-										<!-- <span class="addtocart"><a href="product/detail/{{ $product->id }}"><i class="icon-shopping-cart"></i></a></span> -->
-										<span><a href="product/detail/{{ $product->id }}"><i class="icon-eye"></i></a></span>
-										
-
+										<span><a class="fix_icon_eye_index" href="product/detail/{{ $product->id }}"><i class="icon-eye"></i></a></span>
 									</p>
 								</div>
 							</div>
@@ -107,7 +102,7 @@
 								<p class="tag"><span class="new">New</span></p>
 								<div class="cart">
 									<p>
-										<span><a href="product/detail/{{ $product_30_gach_nen->id }}"><i class="icon-eye"></i></a></span>
+										<span><a class="fix_icon_eye_index" href="product/detail/{{ $product_30_gach_nen->id }}"><i class="icon-eye"></i></a></span>
 									</p>
 								</div>
 							</div>
@@ -128,7 +123,7 @@
 								<p class="tag"><span class="new">New</span></p>
 								<div class="cart">
 									<p>
-										<span><a href="product/detail/{{ $product_30_gach_op->id }}"><i class="icon-eye"></i></a></span>
+										<span><a class="fix_icon_eye_index" href="product/detail/{{ $product_30_gach_op->id }}"><i class="icon-eye"></i></a></span>
 									</p>
 								</div>
 							</div>
@@ -149,7 +144,7 @@
 								<p class="tag"><span class="new">New</span></p>
 								<div class="cart">
 									<p>
-										<span><a href="product/detail/{{ $product->id }}"><i class="icon-eye"></i></a></span>
+										<span><a class="fix_icon_eye_index" href="product/detail/{{ $product->id }}"><i class="icon-eye"></i></a></span>
 									</p>
 								</div>
 							</div>
