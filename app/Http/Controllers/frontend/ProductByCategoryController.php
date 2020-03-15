@@ -16,9 +16,10 @@ class ProductByCategoryController extends Controller
     
     public function getKey(Request $request, $id)
     {
-        $data['category']=category::where("id", $id)->get();
+        // $data['category']=category::where("id", $id)->get();
         $data['products']=product::where("category_id","$id")->where('img','<>','no-img.jpg')->paginate(12);
         $data['attribute']=attribute::all();
+        $data['category']=category::all();
         return view('frontend.category_by_product',$data);
     }
 }
