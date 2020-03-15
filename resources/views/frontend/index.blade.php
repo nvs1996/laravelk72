@@ -80,8 +80,8 @@
 							<div class="product-img" style="background-image: url(public/backend/img/{{ $product->img }});">
 								<p class="tag"><span class="new">New</span></p>
 								<div class="cart">
-									<p>
-										<span><a class="fix_icon_eye_index" href="product/detail/{{ $product->id }}"><i class="icon-eye"></i></a></span>
+									<p class="fix_icon_eye_index">
+										<span><a href="product/detail/{{ $product->id }}"><i class="icon-eye"></i></a></span>
 									</p>
 								</div>
 							</div>
@@ -101,8 +101,8 @@
 							<div class="product-img" style="background-image: url(public/backend/img/{{ $product->img }});">
 								<p class="tag"><span class="new">New</span></p>
 								<div class="cart">
-									<p>
-										<span><a class="fix_icon_eye_index" href="product/detail/{{ $product_30_gach_nen->id }}"><i class="icon-eye"></i></a></span>
+									<p class="fix_icon_eye_index">
+										<span><a href="product/detail/{{ $product_30_gach_nen->id }}"><i class="icon-eye"></i></a></span>
 									</p>
 								</div>
 							</div>
@@ -122,8 +122,8 @@
 							<div class="product-img" style="background-image: url(public/backend/img/{{ $product_30_gach_op->img }});">
 								<p class="tag"><span class="new">New</span></p>
 								<div class="cart">
-									<p>
-										<span><a class="fix_icon_eye_index" href="product/detail/{{ $product_30_gach_op->id }}"><i class="icon-eye"></i></a></span>
+									<p class="fix_icon_eye_index">
+										<span><a href="product/detail/{{ $product_30_gach_op->id }}"><i class="icon-eye"></i></a></span>
 									</p>
 								</div>
 							</div>
@@ -143,8 +143,8 @@
 							<div class="product-img" style="background-image: url(public/backend/img/{{ $product->img }});">
 								<p class="tag"><span class="new">New</span></p>
 								<div class="cart">
-									<p>
-										<span><a class="fix_icon_eye_index" href="product/detail/{{ $product->id }}"><i class="icon-eye"></i></a></span>
+									<p class="fix_icon_eye_index">
+										<span><a href="product/detail/{{ $product->id }}"><i class="icon-eye"></i></a></span>
 									</p>
 								</div>
 							</div>
