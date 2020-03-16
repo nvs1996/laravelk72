@@ -2452,6 +2452,7 @@ img {vertical-align: middle;}
 .upercase {
   text-transform: uppercase;
   font-size: 20px;
+  color: black;
 }
 .fix_icon_eye_index {
   height: 40px;
