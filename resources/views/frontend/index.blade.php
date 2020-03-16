@@ -25,7 +25,7 @@
 					</div>
 					<div class="col-md-6">
 						<div class="imgNoti">
-							<div style="background-image: url('public/frontend/images/tintuc3.jpg');" class="img_noti_inside"> 
+							<div style="background-image: url('public/frontend/images/imgnoti.jpg');" class="img_noti_inside"> 
 								<h2 class="h2noti">Các tin tức mới nhất của CND</h2>
 								@foreach ($notifications as $notification)
 									<div class="notifition">
