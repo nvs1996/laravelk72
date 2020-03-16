@@ -4,7 +4,7 @@ namespace App\Http\Controllers\backend;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\models\Project;
+use App\models\project;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Redirect;
 
@@ -12,7 +12,7 @@ class ProjectController extends Controller
 {
     public function index(Request $request)
     {
-        $projects = Project::orderBy("id","DESC")->paginate(4);
+        $projects = project::orderBy("id","DESC")->paginate(4);
         return view('backend.project.index', [
             "projects" => $projects,
         ]);
@@ -20,7 +20,7 @@ class ProjectController extends Controller
     public function ProjectCreate()
     {
         return view('backend.project.create', [
-            "project" => Project::all(),
+            "project" => project::all(),
         ]);
     }
 
@@ -57,14 +57,14 @@ class ProjectController extends Controller
     }
     public function ProjectEdit($id)
     {
-        $projects = Project::where("id", $id)->first();
+        $projects = project::where("id", $id)->first();
         return view('backend.project.edit', [
             'projects' => $projects,
         ]);
     }
 
     public function ProjectUpdate(Request $request,$id){
-        $projects = Project::find($id);
+        $projects = project::find($id);
         $projects->name = $request->name;
         $projects->detail = $request->detail;
         if($request->hasFile('img'))
@@ -87,7 +87,7 @@ class ProjectController extends Controller
 
     public function Destroy($id)
     {
-        $obj = Project::where("id", $id)->first();
+        $obj = project::where("id", $id)->first();
         if ($obj) {
             $obj->delete();
             return Redirect::route('project.index')->with('msg_success','Xóa dự án thành công');
