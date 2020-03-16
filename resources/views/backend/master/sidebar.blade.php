@@ -70,7 +70,7 @@
 				</svg> Quản lý công trình </a></li>	
 			<li @yield('slide')><a href="admin/slide/index"><svg class="glyph stroked notepad ">
 				<use xlink:href="#stroked-notepad" />
-				</svg> Quản lý ảnh slideshow </a></li>	
+				</svg> Quản lý slide </a></li>		
 			<div class="dropdown">
 			 	<button class="dropbtn"><i class="fa fa-bars" style="padding-right: 16px; margin-left: -10px; "></i>Quản lý lĩnh vực khác</button>
 		 		<div class="dropdown-content">

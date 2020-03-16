@@ -15,22 +15,17 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6">
+						@foreach ($slides as $slide)
 							<div class="slideshow">
 								<div class="w3-content w3-section">
-									<img class="mySlides w3-animate-fading image" src="public/frontend/images/blog-3.jpg">
-									<img class="mySlides w3-animate-fading image" src="public/frontend/images/blog-1.jpg">
-									<img class="mySlides w3-animate-fading image" src="public/frontend/images/blog-2.jpg">
+									<img class="mySlides w3-animate-fading image" src="public/backend/img/{{ $slide->img }}">
+								</div>
 							</div>
-						</div>
+						@endforeach
 					</div>
 					<div class="col-md-6">
-						<div class="row">
-							<div class="col-md-12">
-								<!-- <a href="" class="f-product-2" style="background-image: url(public/frontend/images/blog-3.jpg);">
-									<div class="desc">
-										<h2>Tin <br>tức <br>Cnd</h2>
-									</div>
-								</a> -->
+						<div class="imgNoti">
+							<div style="background-image: url('public/frontend/images/tintuc3.jpg');" class="img_noti_inside"> 
 								<h2 class="h2noti">Các tin tức mới nhất của CND</h2>
 								@foreach ($notifications as $notification)
 									<div class="notifition">
@@ -41,6 +36,7 @@
 						</div>
 					</div>
 				</div>
+			</div>
 			</div>
 		</div>
 		<div class="colorlib-shop">

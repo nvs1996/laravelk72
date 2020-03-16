@@ -32,24 +32,10 @@ class="active"
                 <div class="col-md-6">
                     <!-- /.form-group -->
                     <div class="form-group">
-                        <label> Tên dự án (*)</label>
-                        <input name="name" value="{{ $slides->name }}" type="text" class="form-control" placeholder="Nhập vào tên dự án" required>
-                    </div>
-                    <div class="form-group">
                         <label>Ảnh slide</label>
-                        <input id="img" type="file" name="product_img" class="form-control hidden"
-                            onchange="changeImg(this)">
-                        <img id="avatar" class="thumbnail" width="100%" height="350px" src="public/backend/img/{{ $slides->img }}">
-                    </div>
-                    <div class="form-group">
-                        <label>Nội dung phụ(*)</label>
-                        <textarea name="detail2" value="{{ $slides->detail2 }}" type="text" class="form-control" placeholder="Nhập vào nội dung"><?php echo ( $slides->detail2 ); ?></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label>Ảnh phụ của dự án</label>
-                        <input id="img" type="file" name="product_img2" class="form-control hidden"
-                            onchange="changeImg(this)">
-                        <img id="avatar" class="thumbnail" width="60%" height="200px" src="public/backend/img/{{ $slides->img2 }}">
+                        <input id="img1" type="file" name="img" class="form-control hidden"
+                            onchange="changeImg1(this)">
+                        <img id="avatar1" class="thumbnail" width="100%" height="100%" src="public/backend/img/{{ $slides->img }}">
                     </div>
                 </div>
             </div>
@@ -68,21 +54,21 @@ class="active"
 @section('script')
 @parent
 <script>
-    function changeImg(input) {
+    function changeImg1(input) {
         //Nếu như tồn thuộc tính file, đồng nghĩa người dùng đã chọn file mới
         if (input.files && input.files[0]) {
             var reader = new FileReader();
             //Sự kiện file đã được load vào website
             reader.onload = function (e) {
                 //Thay đổi đường dẫn ảnh
-                $('#avatar').attr('src', e.target.result);
+                $('#avatar1').attr('src', e.target.result);
             }
             reader.readAsDataURL(input.files[0]);
         }
     }
     $(document).ready(function () {
-        $('#avatar').click(function () {
-            $('#img').click();
+        $('#avatar1').click(function () {
+            $('#img1').click();
         });
     });
 </script>

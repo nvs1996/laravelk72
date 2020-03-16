@@ -4,6 +4,7 @@ namespace App\Http\Controllers\frontend;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\models\product;
+use App\models\slide;
 use App\models\category;
 use App\models\notification;
 
@@ -22,6 +23,7 @@ class indexController extends Controller
     {
         $data['products'] = product::where('img','<>','no-img.jpg')->orderby('created_at','DESC')->take(8)->get();
         $data['notifications'] = notification::orderby('id','DESC')->take(5)->get();
+        $data['slides'] = slide::orderby('id','DESC')->take(3)->get();
         $data['product_80s'] = product::where("category_id", "11")->take(4)->get();
         $data['product_60s'] = product::where("category_id", "12")->take(4)->get();
         $data['product_30s_gach_nen'] = product::where("category_id", "17")->take(4)->get();

@@ -62,7 +62,7 @@ class="active"
 		                                                </li>
 		                                                <li>
 		                                                    {!! Form::open(['method' => 'DELETE', 'route' => ['notification.destroy', $notification->id]]) !!}
-		                                                    <a href="#" class="btn btn-default form-control"  onclick="if(confirm('Bạn có chắc muốn xóa bản ghi này không?')) $(this).closest('form').submit();"><i class="fa fa-trash"></i> Xoá</a>
+		                                                    <a href="admin/notification/index" class="btn btn-default form-control"  onclick="if(confirm('Bạn có chắc muốn xóa bản ghi này không?')) $(this).closest('form').submit();"><i class="fa fa-trash"></i> Xoá</a>
 		                                                    {!! Form::close() !!}
 		                                                </li>
 		                                            </ul>

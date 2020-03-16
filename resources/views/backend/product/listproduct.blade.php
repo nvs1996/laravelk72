@@ -55,7 +55,7 @@
 										@endphp
 										@foreach ($products as $product)
 										<tr>
-										<td>{{$i}}</td>
+										<td>{{$product->id}}</td>
 											<td>
 												<div class="row">
 												<div class="col-md-3"><img src="public/backend/img/{{$product->img}}" alt="Áo đẹp" width="100px" class="thumbnail"></div>

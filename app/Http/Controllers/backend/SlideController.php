@@ -12,7 +12,7 @@ class SlideController extends Controller
 {
     public function index(Request $request)
     {
-        $slides = slide::orderBy("id","DESC")->paginate(4);
+        $slides = slide::orderBy("id","DESC")->paginate(3);
         return view('backend.slide.index', [
             "slides" => $slides,
         ]);
@@ -27,7 +27,6 @@ class SlideController extends Controller
     public function SlideStore(Request $request)
     {
         $slide =new slide;
-        $slide->name = $request->name;
         if($request->hasFile('product_img'))
         {
             $file = $request->product_img;
@@ -39,7 +38,6 @@ class SlideController extends Controller
         {
             $slide->img='no-img.jpg';
         }
-        
         $slide->save();
         return Redirect::route('slide.index')->with(["thongbao"=>"Tạo sldie thành công!"]);
     }
@@ -53,8 +51,6 @@ class SlideController extends Controller
 
     public function SlideUpdate(Request $request,$id){
         $slides = slide::find($id);
-        $slides->name = $request->name;
-        $slides->detail = $request->detail;
         if($request->hasFile('img'))
         {
             $file = $request->img;

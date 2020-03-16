@@ -36,7 +36,8 @@ class="active"
 										</svg>{{ session('thongbao') }}<a href="{{ route('slide.index') }}" class="pull-right"><span class="glyphicon glyphicon-remove"></span></a>
 									</div>
 								@endif
-								<a href="{{ route('slide.create') }}" class="btn btn-success">Thêm dự slide</a>
+								<a href="{{ route('slide.create') }}" class="btn btn-success">Thêm slide</a>
+								<h5>Slide bên ngoài trang bán hàng sẽ hiển thị ra 3 slide gần nhất!!! </h5>
 								<table class="table table-bordered" style="margin-top:20px;">
 									<thead>
 										<tr class="bg-primary">
@@ -51,7 +52,7 @@ class="active"
 										@endphp
 										@foreach ($slides as $slide)
 										<tr>
-											<td>{{$i}}</td>
+											<td>{{$slide->id}}</td>
 											<td>
 												<div class="row">
 												<div class="col-md-3"><img src="public/backend/img/{{$slide->img}}" alt="" width="100px" class="thumbnail"></div>
@@ -67,7 +68,7 @@ class="active"
 		                                                </li>
 		                                                <li>
 		                                                    {!! Form::open(['method' => 'DELETE', 'route' => ['slide.destroy', $slide->id]]) !!}
-		                                                    <a href="#" class="btn btn-default form-control"  onclick="if(confirm('Bạn có chắc muốn xóa bản ghi này không?')) $(this).closest('form').submit();"><i class="fa fa-trash"></i> Xoá</a>
+		                                                    <a href="admin/slide/index" class="btn btn-default form-control"  onclick="if(confirm('Bạn có chắc muốn xóa bản ghi này không?')) $(this).closest('form').submit();"><i class="fa fa-trash"></i> Xoá</a>
 		                                                    {!! Form::close() !!}
 		                                                </li>
 		                                            </ul>
