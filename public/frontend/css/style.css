@@ -2409,7 +2409,7 @@ img {vertical-align: middle;}
   height: 350px;
 }
 /* On smaller screens, decrease text size */
-@media only screen and (max-width: 992px) {
+@media only screen and (min-width: 769px) {
   .image{
   width: 550px!important;
   height: 350px !important;}
@@ -2480,7 +2480,7 @@ img {vertical-align: middle;}
   height: 350px;
   
 }
-@media only screen and (max-width: 992px) {
+@media only screen and (min-width: 769px) {
  .img_noti_inside {
   background-size:cover;
   width: 550px !important;
