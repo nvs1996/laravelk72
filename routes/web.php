@@ -77,8 +77,9 @@ Route::group(['prefix' => 'admin','middleware'=>'CheckLogout','namespace'=>'back
     });
 
     // slide
+    // 
     Route::group(['prefix' => 'slide'], function () {
-        Route::get('index', 'ProjectController@index')->name('slide.index');
+        Route::get('index', 'SlideController@index')->name('slide.index');
         Route::get('slide/create', 'SlideController@SlideCreate')->name('slide.create');
         Route::post('slide/store', 'SlideController@SlideStore')->name('slide.store');
         Route::post('slide/update/{id}', 'SlideController@SlideUpdate')->name('slide.update');
