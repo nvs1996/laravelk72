@@ -26,6 +26,13 @@ class ProductController extends Controller
 
     public function PostAddProduct(request $request)
     {
+        if (!isset($request->value)){
+            return redirect()->back()->with('thongbao','Bạn chưa thêm thuộc tính cho sản phẩm! ');
+        }
+        $check_product_code = product::where('product_code', $request->product_code)->get();
+        if ($check_product_code != null){
+            return redirect()->back()->with('thongbao','Mã sản phẩm đã tồn tại! ');
+        }
         $product=new product;
         $product->product_code=$request->product_code;
         $product->name=$request->product_name;
@@ -175,6 +182,10 @@ class ProductController extends Controller
         $product->product_code=$request->product_code;
         $product->name=$request->product_name;
         $product->price=$request->product_price;
+        $check_product_code = product::whereNotIn('product_code',$product->product_code)->where('product_code', $request->product_code)->get();
+        if ($check_product_code != null){
+            return redirect()->back()->with('thongbao','Mã sản phẩm đã tồn tại! ');
+        }
         if($request->hasFile('product_img'))
         {
             // if($product->img!='no-img.jpg')
