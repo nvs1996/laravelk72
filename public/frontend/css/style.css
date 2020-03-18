@@ -2409,9 +2409,9 @@ img {vertical-align: middle;}
   height: 350px;
 }
 /* On smaller screens, decrease text size */
-@media only screen and (max-width: 1025px) {
+@media only screen and (min-width: 1025px) {
   .image{
-  width:600px;
+  width: 550px;
   height: 350px;}
 }
 .notifition {
@@ -2480,9 +2480,9 @@ img {vertical-align: middle;}
   height: 350px;
   
 }
-@media only screen and (max-width: 1025px) {
+@media only screen and (min-width: 1025px) {
  .img_noti_inside {
   width: 100%; height: 100%;background-size:cover;
-  width: 600px;
+  width: 550px;
   height: 350px;}
 }
