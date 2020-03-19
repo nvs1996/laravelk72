@@ -32,6 +32,8 @@
     <!-- Theme style  -->
     <link rel="stylesheet" href="public/frontend/css/custome.css">
 	<link rel="stylesheet" href="public/frontend/css/style.css">
+    <link rel="stylesheet" href="public/frontend/css/app/app.css">
+    <link rel="stylesheet" href="{{url('public/plugins/bootstrap/dist/css/bootstrap.min.css')}}">
 
 	<!-- Modernizr JS -->
 	<!-- <script src="public/frontend/public/frontend/js/modernizr-2.6.2.min.js"></script> -->
@@ -71,6 +73,9 @@
     <!-- Main -->
     <script src="public/frontend/js/main.js"></script>
     <script src="public/frontend/public/frontend/js/modernizr-2.6.2.min.js"></script>
+
+    <script src="{{url('public/plugins/bootstrap/dist/js/bootstrap.min.js')}}"></script>
+    <!-- <script src="{{url('public/plugins/jquery/dist/jquery.min.js')}}"></script> -->
  @show
 
 </body>
