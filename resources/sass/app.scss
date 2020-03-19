@@ -12,8 +12,10 @@
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
-
-*{
+*, *:before, *:after{
+  box-sizing:border-box;
+}
+*,*:before, *:after{
   margin: 0;
   padding: 0;
 }
@@ -75,3 +77,5 @@
 a{
   text-decoration: none !important;
 }
+
+// notifaction
