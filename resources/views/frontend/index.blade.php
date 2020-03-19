@@ -11,6 +11,7 @@
 </style>
 </head>
 <body>
+
 		<div id="colorlib-featured-product">
 			<div class="container">
 				<div class="row">
@@ -155,6 +156,7 @@
 			</div>
 		</div>
 </body>
+
 <script>
 var myIndex = 0;
 carousel();

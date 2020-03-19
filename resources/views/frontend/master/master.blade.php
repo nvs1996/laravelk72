@@ -31,7 +31,8 @@
 
     <!-- Theme style  -->
     <link rel="stylesheet" href="public/frontend/css/custome.css">
-	<link rel="stylesheet" href="public/frontend/css/style.css">
+    <link rel="stylesheet" href="public/frontend/css/style.css">
+    <link rel="stylesheet" href="public/frontend/css/app.css">
 
 	<!-- Modernizr JS -->
 	<!-- <script src="public/frontend/public/frontend/js/modernizr-2.6.2.min.js"></script> -->
