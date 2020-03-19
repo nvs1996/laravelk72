@@ -12,4 +12,12 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
-   .sass('resources/sass/app.scss', 'public/frontend/css/app.css');
+   .sass('resources/sass/app.scss', 'public/frontend/css/app.css')
+   .copy(
+      'node_modules/bootstrap',
+      'public/plugins/bootstrap'
+  )
+  .copy(
+   'node_modules/jquery',
+   'public/plugins/jquery'
+);
