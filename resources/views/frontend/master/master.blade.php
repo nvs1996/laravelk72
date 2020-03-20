@@ -32,7 +32,7 @@
     <!-- Theme style  -->
     <link rel="stylesheet" href="public/frontend/css/custome.css">
 	<link rel="stylesheet" href="public/frontend/css/style.css">
-    <link rel="stylesheet" href="public/frontend/css/app/app.css">
+    <link rel="stylesheet" href="public/frontend/css/app.css">
     <link rel="stylesheet" href="{{url('public/plugins/bootstrap/dist/css/bootstrap.min.css')}}">
 
 	<!-- Modernizr JS -->

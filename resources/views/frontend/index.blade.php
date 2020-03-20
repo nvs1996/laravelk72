@@ -1,82 +1,45 @@
 @extends('frontend.master.master')
 @section('title','Store')
 @section('content')
-<head>
-<title>W3.CSS</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<style>
-.mySlides {display:none;}
-</style>
-</head>
-<body>
 
+<div id="main" class="main">
 	<div class="container">
-		
-		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
-				<div class="wrapper-slideshow">
-					@foreach ($slides as $slide)
-						<div class="slideshow">
-							<div class="w3-content w3-section">
-								<img class="mySlides w3-animate-fading image" src="public/backend/img/{{ $slide->img }}">
-							</div>
-						</div>
-					@endforeach
-				</div>
-			</div>
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
-				<div class="imgNoti">
-					<div style="background-image: url('public/frontend/images/imgnoti.jpg');" class="img_noti_inside"> 
-						<h2 class="h2noti">Các tin tức mới nhất của CND</h2>
-						@foreach ($notifications as $notification)
-							<div class="notifition">
-								<li style="font-family: Courier New"> {{ $notification->title }}</li>
+		<div class="top-main">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+					<div class="wrapper-slideshow">
+						@foreach ($slides as $slide)
+							<div class="slideshow">
+								<div>
+									<img class="mySlides w3-animate-fading image" src="public/backend/img/{{ $slide->img }}">
+								</div>
 							</div>
 						@endforeach
 					</div>
 				</div>
-			</div>
-		</div>
-		
-	</div>
-
-	<!-- <div id="colorlib-featured-product">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6">
-					@foreach ($slides as $slide)
-						<div class="slideshow">
-							<div class="w3-content w3-section">
-								<img class="mySlides w3-animate-fading image" src="public/backend/img/{{ $slide->img }}">
-							</div>
-						</div>
-					@endforeach
-				</div>
-				<div class="col-md-6">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
 					<div class="imgNoti">
 						<div style="background-image: url('public/frontend/images/imgnoti.jpg');" class="img_noti_inside"> 
 							<h2 class="h2noti">Các tin tức mới nhất của CND</h2>
-							@foreach ($notifications as $notification)
-								<div class="notifition">
-									<li style="font-family: Courier New"> {{ $notification->title }}</li>
-								</div>
-							@endforeach
+							<ul class="list-group list-group-flush">
+								@foreach ($notifications as $notification)
+								<li class="list-group-item bg-none">{{ $notification->title }}</li>
+								@endforeach
+							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		</div>
-	</div> -->
-	<div class="colorlib-shop">
-		<div class="container">
+		<div class="product-main">
 			<div class="row">
-				<div class="col-md-6 col-md-offset-3 text-center colorlib-heading">
-					<h2><span> Sản phẩm được quan tâm nhiều nhất </span></h2>
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center title-product-care">
+					<h2>Sản phẩm được quan tâm nhiều nhất</h2>
 				</div>
 			</div>
+		</div>
+		<div class="colorlib-shop">
+			
 			<div class="row">
 				@foreach ($product_80s as $product)
 				<h3 class="upercase"><a href="product_by_category/{{ $product->category->id }}">Sản phẩm gạch 800*800</a></h3>
@@ -185,7 +148,38 @@
 			</div>
 		</div>
 	</div>
-</body>
+</div>
+	
+
+	<!-- <div id="colorlib-featured-product">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					@foreach ($slides as $slide)
+						<div class="slideshow">
+							<div class="w3-content w3-section">
+								<img class="mySlides w3-animate-fading image" src="public/backend/img/{{ $slide->img }}">
+							</div>
+						</div>
+					@endforeach
+				</div>
+				<div class="col-md-6">
+					<div class="imgNoti">
+						<div style="background-image: url('public/frontend/images/imgnoti.jpg');" class="img_noti_inside"> 
+							<h2 class="h2noti">Các tin tức mới nhất của CND</h2>
+							@foreach ($notifications as $notification)
+								<div class="notifition">
+									<li style="font-family: Courier New"> {{ $notification->title }}</li>
+								</div>
+							@endforeach
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div> -->
+
 <script>
 var myIndex = 0;
 carousel();

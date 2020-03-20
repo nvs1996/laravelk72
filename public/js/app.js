@@ -49485,8 +49485,13 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 __webpack_require__(/*! D:\xampp\htdocs\laravelk72\resources\js\app.js */"./resources/js/app.js");
 module.exports = __webpack_require__(/*! D:\xampp\htdocs\laravelk72\resources\sass\app.scss */"./resources/sass/app.scss");
+=======
+__webpack_require__(/*! D:\XAMPP\htdocs\laravelk72\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! D:\XAMPP\htdocs\laravelk72\resources\sass\app.scss */"./resources/sass/app.scss");
+>>>>>>> 6884c188cda42039c9134a787f1a1a62d0460490
 
 
 /***/ })
