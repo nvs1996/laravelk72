@@ -29,9 +29,11 @@ class ProductController extends Controller
         if (!isset($request->value)){
             return redirect()->back()->with('thongbao','Bạn chưa thêm thuộc tính cho sản phẩm! ');
         }
-        $check_product_code = product::where('product_code', $request->product_code)->get();
-        if ($check_product_code != null){
-            return redirect()->back()->with('thongbao','Mã sản phẩm đã tồn tại! ');
+        if ($request->has('product_code')) {
+            $check_product_code = product::where('product_code', $request->product_code)->exists();
+            if ($check_product_code == true) {
+                return redirect()->back()->with('thongbao','Mã sản phẩm đã tồn tại! ');
+            }
         }
         $product=new product;
         $product->product_code=$request->product_code;
@@ -179,13 +181,16 @@ class ProductController extends Controller
      public function PostEditProduct(EditProductRequest $request,$id_product)
      {
         $product=product::find($id_product);
+        if ($request->has('product_code')) {
+            $product_code = $product->product_code;
+            $check_product_code = product::whereNotIn('product_code', [$product_code])->where('product_code', $request->product_code)->exists();
+            if ($check_product_code == true) {
+                return redirect()->back()->with('thongbao','Mã sản phẩm đã tồn tại! ');
+            }
+        }
         $product->product_code=$request->product_code;
         $product->name=$request->product_name;
         $product->price=$request->product_price;
-        $check_product_code = product::whereNotIn('product_code',$product->product_code)->where('product_code', $request->product_code)->get();
-        if ($check_product_code != null){
-            return redirect()->back()->with('thongbao','Mã sản phẩm đã tồn tại! ');
-        }
         if($request->hasFile('product_img'))
         {
             // if($product->img!='no-img.jpg')
@@ -225,7 +230,6 @@ class ProductController extends Controller
         $product->info6 = $request->info6;
         $product->describe = $request->description;
         $product->save();
-
         
         //add values_product
         $product->values()->Sync(Arr::collapse($request->value));
