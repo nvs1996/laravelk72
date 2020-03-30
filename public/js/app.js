@@ -49474,7 +49474,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nError: ENOENT: no such file or directory, open 'D:\\XAMPP\\htdocs\\laravelk72\\resources\\sass\\app.scss'\n    at runLoaders (D:\\XAMPP\\htdocs\\laravelk72\\node_modules\\webpack\\lib\\NormalModule.js:316:20)\n    at D:\\XAMPP\\htdocs\\laravelk72\\node_modules\\loader-runner\\lib\\LoaderRunner.js:367:11\n    at D:\\XAMPP\\htdocs\\laravelk72\\node_modules\\loader-runner\\lib\\LoaderRunner.js:203:19\n    at process.nextTick (D:\\XAMPP\\htdocs\\laravelk72\\node_modules\\enhanced-resolve\\lib\\CachedInputFileSystem.js:85:15)\n    at process._tickCallback (internal/process/next_tick.js:61:11)");
 
 /***/ }),
 
@@ -49485,13 +49485,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
-__webpack_require__(/*! D:\xampp\htdocs\laravelk72\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! D:\xampp\htdocs\laravelk72\resources\sass\app.scss */"./resources/sass/app.scss");
-=======
 __webpack_require__(/*! D:\XAMPP\htdocs\laravelk72\resources\js\app.js */"./resources/js/app.js");
 module.exports = __webpack_require__(/*! D:\XAMPP\htdocs\laravelk72\resources\sass\app.scss */"./resources/sass/app.scss");
->>>>>>> 6884c188cda42039c9134a787f1a1a62d0460490
 
 
 /***/ })

@@ -2,31 +2,74 @@
 @section('title','detail')
 @section('content')
 
-<div class="colorlib-shop" style="margin-top: 50px;">
+<div class="shop-area pt-50 pb-100 blog-project">
     <div class="container">
-        <div class="row">
-            <div class="col-md-9 col-md-push-3" style="left: 12%">
-                <!-- <h2 style="text-align: center; color: brown; text-transform: uppercase; font-size: 25px;">Bảng giá cải tạo và sửa chữa nhà</h2> -->
-                <div class="row row-pb-lg">
-                @foreach ($costs as $cost)
-                    <div class="col-md-12 text-center">
-                    <div class="product-entry">
-                        <div class="desc" style="color: brown;">
-                            <h2 style="color: brown;">{{ $cost->detail }}</h2>
+        <div class="row flex-row-reverse">
+            <div class="col-lg-12 col-md-12">
+                <div class="blog-details-wrapper res-mrg-top">
+                    <div class="single-blog-wrapper">
+                        <div class="title-label">
+                            <div class="breadcrumb-content text-center">
+                                <h2>Bảng báo giá sửa chữa, cải tạo nhà CND 2020 !!!</h2>
+                            </div>
                         </div>
-                        <div style="display: block; height: 500px; margin-bottom: 20px; position: relative; background-image: url(public/backend/img/{{ $cost->img }});">
+                        <div class="dec-img-wrapper">
+                            <div class="row justify-content-md-center">
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="dec-img">
+                                        <img src="{{url('public/frontend/images/iAKbmU908.jpg')}}" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="dec-img dec-mrg res-mrg-top-2">
+                                        <img src="{{url('public/frontend/images/iAKbmU908.jpg')}}" alt="">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    </div>
-                    <div class="product-entry">
-                        <div class="desc" style="color: brown;">
-                            <p style="color: brown;">{{ $cost->detail2 }}</p>
+                        <div class="blog-details-content">
+                            
                         </div>
-                        <div class="product-img" style="background-image: url(public/backend/img/{{ $cost->img2 }});">
-                        </div>
+                        <p>Thiết kế nhà phố mang phong cách hiện đại trẻ trung thể hiện được vẻ đẹp thẩm mỹ cao, không gian sống thoáng mát và công năng sử dụng tối ưu. Chắc chắn mẫu thiết kế nhà đẹp này sẽ là sự lựa chọn hoàn hảo nhất cho mái ấm tương lai của gia đình bạn. Thiết kế nhà phố được thiết kế theo lối hiện đại, các đường nét thiết kế kiến trúc đều có sự liên kết chặt chẽ với nhau thể hiện được vẻ đẹp rất tối ưu và nổi bật.
+                            Chủ đầu tư: Anh Hạ
+                            Đơn vị thiết kế và thi cộng: CND Architecture
+                            Địa điểm: Diễn Châu – Nghệ An
+                            Diện tích: 140m2
+                            Dự kiến hoàn thành: T6/2018
+                            Chi phí hoàn thiện: 550.000.000 (VNĐ)Thiết kế nhà phố mang phong cách hiện đại trẻ trung thể hiện được vẻ đẹp thẩm mỹ cao, không gian sống thoáng mát và công năng sử dụng tối ưu. Chắc chắn mẫu thiết kế nhà đẹp này sẽ là sự lựa chọn hoàn hảo nhất cho mái ấm tương lai của gia đình bạn. Thiết kế nhà phố được thiết kế theo lối hiện đại, các đường nét thiết kế kiến trúc đều có sự liên kết chặt chẽ với nhau thể hiện được vẻ đẹp rất tối ưu và nổi bật.
+                            Chủ đầu tư: Anh Hạ
+                            Đơn vị thiết kế và thi cộng: CND Architecture
+                            Địa điểm: Diễn Châu – Nghệ An
+                            Diện tích: 140m2
+                            Dự kiến hoàn thành: T6/2018
+                            Chi phí hoàn thiện: 550.000.000 (VNĐ)Thiết kế nhà phố mang phong cách hiện đại trẻ trung thể hiện được vẻ đẹp thẩm mỹ cao, không gian sống thoáng mát và công năng sử dụng tối ưu. Chắc chắn mẫu thiết kế nhà đẹp này sẽ là sự lựa chọn hoàn hảo nhất cho mái ấm tương lai của gia đình bạn. Thiết kế nhà phố được thiết kế theo lối hiện đại, các đường nét thiết kế kiến trúc đều có sự liên kết chặt chẽ với nhau thể hiện được vẻ đẹp rất tối ưu và nổi bật.
+                            Chủ đầu tư: Anh Hạ
+                            Đơn vị thiết kế và thi cộng: CND Architecture
+                            Địa điểm: Diễn Châu – Nghệ An
+                            Diện tích: 140m2
+                            Dự kiến hoàn thành: T6/2018
+                            Chi phí hoàn thiện: 550.000.000 (VNĐ)Thiết kế nhà phố mang phong cách hiện đại trẻ trung thể hiện được vẻ đẹp thẩm mỹ cao, không gian sống thoáng mát và công năng sử dụng tối ưu. Chắc chắn mẫu thiết kế nhà đẹp này sẽ là sự lựa chọn hoàn hảo nhất cho mái ấm tương lai của gia đình bạn. Thiết kế nhà phố được thiết kế theo lối hiện đại, các đường nét thiết kế kiến trúc đều có sự liên kết chặt chẽ với nhau thể hiện được vẻ đẹp rất tối ưu và nổi bật.
+                            Chủ đầu tư: Anh Hạ
+                            Đơn vị thiết kế và thi cộng: CND Architecture
+                            Địa điểm: Diễn Châu – Nghệ An
+                            Diện tích: 140m2
+                            Dự kiến hoàn thành: T6/2018
+                            Chi phí hoàn thiện: 550.000.000 (VNĐ)Thiết kế nhà phố mang phong cách hiện đại trẻ trung thể hiện được vẻ đẹp thẩm mỹ cao, không gian sống thoáng mát và công năng sử dụng tối ưu. Chắc chắn mẫu thiết kế nhà đẹp này sẽ là sự lựa chọn hoàn hảo nhất cho mái ấm tương lai của gia đình bạn. Thiết kế nhà phố được thiết kế theo lối hiện đại, các đường nét thiết kế kiến trúc đều có sự liên kết chặt chẽ với nhau thể hiện được vẻ đẹp rất tối ưu và nổi bật.
+                            Chủ đầu tư: Anh Hạ
+                            Đơn vị thiết kế và thi cộng: CND Architecture
+                            Địa điểm: Diễn Châu – Nghệ An
+                            Diện tích: 140m2
+                            Dự kiến hoàn thành: T6/2018
+                            Chi phí hoàn thiện: 550.000.000 (VNĐ)Thiết kế nhà phố mang phong cách hiện đại trẻ trung thể hiện được vẻ đẹp thẩm mỹ cao, không gian sống thoáng mát và công năng sử dụng tối ưu. Chắc chắn mẫu thiết kế nhà đẹp này sẽ là sự lựa chọn hoàn hảo nhất cho mái ấm tương lai của gia đình bạn. Thiết kế nhà phố được thiết kế theo lối hiện đại, các đường nét thiết kế kiến trúc đều có sự liên kết chặt chẽ với nhau thể hiện được vẻ đẹp rất tối ưu và nổi bật.
+                            Chủ đầu tư: Anh Hạ
+                            Đơn vị thiết kế và thi cộng: CND Architecture
+                            Địa điểm: Diễn Châu – Nghệ An
+                            Diện tích: 140m2
+                            Dự kiến hoàn thành: T6/2018
+                            Chi phí hoàn thiện: 550.000.000 (VNĐ)
+                        </p>
+                        
                     </div>
-                    </div>
-                @endforeach
                 </div>
             </div>
         </div>

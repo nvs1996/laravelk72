@@ -1,143 +1,59 @@
 @extends('frontend.master.master')
 @section('title','detail')
 @section('content')
-
-
-
-
-<div class="colorlib-shop" style="margin-top: 50px;">
-    <div class="container">
-        <div class="row row-pb-lg">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="product-detail-wrap">
-                    <div class="row">
-                        <div class="col-md-5">
-                            <div class="slideshow-container">
-                                <div class="mySlidesImage ">
-                                    <div class="numbertext">1 / 3</div>
-                                    <img src="public/backend/img/{{ $product->img }}">
-                                  <div class="text">CND company</div>
+<div class="shop-area pt-95 pb-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="product-details-img">
+                            <div class="owl-carousel">
+                                <div class="item">
+                                    <img src="{{url('public/frontend/images/item-7.jpg')}}"/>
                                 </div>
-
-                                <div class="mySlidesImage ">
-                                  <div class="numbertext">2 / 3</div>
-                                  <img src="public/backend/img/{{ $product->img2 }}">
-                                  <div class="text">CND company</div>
+                                <div class="item">
+                                    <img  src="{{url('public/frontend/images/img_bg_1.jpg')}}"/>
                                 </div>
-
-                                <div class="mySlidesImage ">
-                                  <div class="numbertext">3 / 3</div>
-                                  <img src="public/backend/img/{{ $product->img3 }}">
-                                  <div class="text">CND company</div>
+                                <div class="item">
+                                    <img src="{{url('public/frontend/images/person2.jpg')}}"/>
                                 </div>
-                                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                                <div class="item">
+                                    <img src="{{url('public/frontend/images/person1.jpg')}}"/>
+                                </div>
+                                <div class="item">
+                                    <img src="{{url('public/frontend/images/person3.jpg')}}"/>
+                                </div>
+                                
                             </div>
-                            <br>
-                            <div>
-                                @if ($product->state==1)
-                                    <a name="" id="" class="btn btn-success" style="display: block;
-                                        margin-left: auto;
-                                        margin-right: auto" role="button">Còn hàng</a>
-                                    @else
-                                    <a name="" id="" class="btn btn-danger" style="display: block;
-                                        margin-left: auto;
-                                        margin-right: auto" role="button">Hết Hàng</a>
-                                @endif
-                            </div>
+                            
+                          
                         </div>
-                        <div class="col-md-7">
-                            <form action="product/AddCart" method="get">
-                                <div class="desc">
-                                    <h3>{{ $product->name }}</h3>
-                                    <p class="price">
-                                        <span>{{number_format( $product->price,0,'',',') }} đ</span>
-                                    </p>
-                                    <p>{{ $product->info }}</p>
-                                    <p>{{ $product->info1 }}</p>
-                                    <p>{{ $product->info2 }}</p>
-                                    <p>{{ $product->info3 }}</p>
-                                    <p>{{ $product->info4 }}</p>
-                                    <p>{{ $product->info5 }}</p>
-                                    <p>{{ $product->info6 }}</p>
-                                    <p>{{ $product->describe }}</p>
-
-                                    
-                                    <!-- @foreach (attr_value($product) as $key=>$value)
-                                    <div class="size-wrap">
-                                        <p class="size-desc">
-                                            {{ $key }}:
-                                            @foreach ($value as $item)
-                                                <a class="size">{{ $item }}</a>
-                                            @endforeach
-                                        </p>
-                                    </div>
-                                    @endforeach -->
-                                    <!-- <h4>Lựa chọn</h4>
-                                    <div class="row">
-                                        @foreach (attr_value($product) as $key=>$value)
-                                        <div class="col-md-3">
-                                            <div class="form-group">
-                                                <label>{{ $key }}:</label>
-                                                <select class="form-control " name="attr[{{ $key }}]" id="">
-                                                    @foreach ($value as $item)
-                                                    <option value="{{ $item }}">{{ $item }}</option>
-                                                    @endforeach
-                                                </select>
-                                            </div>
-                                        </div>
-                                        @endforeach
-                                    </div> -->
-                                    <!-- <div class="row row-pb-sm">
-                                        <div class="col-md-4">
-                                            <div class="input-group">
-                                                <span class="input-group-btn">
-                                                    <button type="button" class="quantity-left-minus btn" data-type="minus"
-                                                        data-field="">
-                                                        <i class="icon-minus2"></i>
-                                                    </button>
-                                                </span>
-                                                <input type="text" id="quantity" name="quantity" class="form-control input-number"
-                                                    value="1" min="1" max="100">
-                                                <span class="input-group-btn">
-                                                    <button type="button" class="quantity-right-plus btn" data-type="plus"
-                                                        data-field="">
-                                                        <i class="icon-plus2"></i>
-                                                    </button>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div> -->
-                                    <!-- <input type="hidden" name="id_product" value="{{ $product->id }}">
-                                    <p><button class="btn btn-primary btn-addtocart" type="submit"> Thêm vào giỏ hàng</button></p> -->
-                                    <form method="post" action="/lien-he">
-                                        <p><button class="btn btn-primary" type="submit"> Liên hệ đặt hàng</button></p>
-                                    </form>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="product-details-content">
+                            <h2>PORCELAIN MEN KIM CƯƠNG SIÊU BÓNG KC89001</h2>
+                            <div class="product-price">
+                                <span class="new">$20.00 </span>
+                            </div>
+                            <div class="in-stock">
+                                <span><i class="ion-android-checkbox-outline"></i>Còn Hàng</span>
+                            </div>
+                            <p>PORCELAIN MEN KIM CƯƠNG SIÊU BÓNG KC89001 Kích thước: 800x800mm Chất liệu: Porcelain, phẳng Công nghệ: Kim cương NANO siêu bóng Màu: Xám tro - vân đá rễ cây Bề mặt : Bề mặt: phẳng - siêu bóng, được phủ lớp men Kim Cương siêu cứng giúp chống trầy xước tốt Độ bóng đạt 99%, Bóng nhưng không trơn - trượt</p>
+                            <p>PORCELAIN MEN KIM CƯƠNG SIÊU BÓNG KC89001 Kích thước: 800x800mm Chất liệu: Porcelain, phẳng Công nghệ: Kim cương NANO siêu bóng Màu: Xám tro - vân đá rễ cây Bề mặt : Bề mặt: phẳng - siêu bóng, được phủ lớp men Kim Cương siêu cứng giúp chống trầy xước tốt Độ bóng đạt 99%, Bóng nhưng không trơn - trượt</p>
+                           
+                            
+                            <div class="product-list-action">
+                                <div class="product-list-action-left">
+                                    <a class="addtocart-btn" href="#" title="Add to cart">
+                                        <i class="ion-bag"></i>
+                                        Liên hệ đặt hàng
+                                    </a>
                                 </div>
-                            </form>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row">
-                    <div class="col-md-12 tabulation">
-                        <ul class="nav nav-tabs">
-                            <li class="active"><a data-toggle="tab" href="#description">Mô tả</a></li>
-                        </ul>
-                        <div class="tab-content">
-                            <div id="description" class="tab-pane fade in active">
-                                <p>dsasdas</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-    </div>
-</div>
 
 @endsection
 

@@ -1,0 +1,196 @@
+
+// Fonts
+// @import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+// global
+.gray-border-bottom{
+    border-bottom: 1px solid #bbbbbb;
+}
+.btn-radius-5{
+    border-radius: 50px;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+
+// logo
+.logo{
+    max-height: 120px;
+    margin: 0 auto;
+    width: 90px;
+    height: 120px;
+    padding: 5px 0;
+    @media only screen and (max-width:991.98px){
+        width: 80px;
+        height: 100px;
+    }
+    @media only screen and (max-width:767.98px){
+        width: 70px;
+        height: 90px;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+//product
+.product-wrapper{
+    .product-img{
+        position: relative;
+        &::after{
+            background: #000 none repeat scroll 0 0;
+            bottom: 0;
+            content: "";
+            height: 100%;
+            left: 50%;
+            opacity: 0;
+            position: absolute;
+            right: 0;
+            transform: translateX(-50%) scale(0.5);
+            transition: all 0.3s ease 0s;
+            width: 100%;
+            
+        }
+    }
+    &:hover{
+        .product-img{
+            &::after{
+                opacity: 0.47;
+                transform: translateX(-50%) scale(1);
+            }
+        }
+    }
+}
+// category
+.cate-padding-1{
+    .single-food-content > h3{
+        padding: 15px 30px;
+        font-family: initial;
+        font-size: 25px;
+    }   
+}
+.footer-widget{
+    .title-contact{
+        margin-bottom: 15px;
+        font-size: 22px;
+    }
+    ul{
+        li{
+            list-style: none;
+            margin-bottom: 10px;
+            i{
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+.newsletter-title{
+    line-height: 45px;
+    text-align: center;
+    >span{
+        font-size: 25px;
+    }
+    >i{
+        font-size: 25px;
+        margin-right: 15px;
+    }
+}
+// menu sidebar 
+#sidebar{
+    ul.slidebar-menu{
+        li{
+            a{
+                color: #333;
+                display: block;
+                font-size: 14px;
+                display: block;
+                border-bottom: 1px solid #cecece;
+                padding: 10px 0;
+                &:hover{
+                    color: #7e4c4f;
+                    padding-left: 5px;
+                }
+                &.menu-dropdown-toggle{
+                    position: relative;
+                    &::after{
+                        display: block;
+                        position: absolute;
+                        top: 50%;
+                        right: 0;
+                        -webkit-transform: translateY(-50%);
+                        -ms-transform: translateY(-50%);
+                        transform: translateY(-50%);
+                    }
+                }
+            }
+            >ul{
+                margin-left: 10px;
+            }
+        }
+    }
+}
+.price_filter{
+    .btn-outline-secondary{
+        color: #383838;
+        text-transform: uppercase;
+        &:hover{
+            background-color: #7e4c4f;
+            border-color: #7e4c4f;
+            color: #ffffff;
+        }
+    }
+}
+// slide image product
+.product-details-img{
+    .owl-carousel {
+        .owl-item{
+            img{
+                height: 500px!important;
+                margin-bottom: 30px;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    }
+}
+.in-stock{
+    margin: 20px 0 8px;
+}
+.product-list-action-left {
+    a{
+        &:hover{
+            background-color: #bbbbbb;
+            color: #484848;
+        }
+    }
+}
+#scrollUp{
+    &:hover{
+        background-color: #bbbbbb;
+        color: #484848;
+    }
+}
+.breadcrumb-content {
+    >h2{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: normal;
+        color: #444444;
+    }
+}
+.blog-project{
+    .blog-img{
+            height: 500px;
+            width: 100%;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+}
+// construction 

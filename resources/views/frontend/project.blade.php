@@ -1,32 +1,47 @@
 @extends('frontend.master.master')
 @section('title','detail')
 @section('content')
-<div class="colorlib-shop" style="margin-top: 50px;">
+
+<div class="pt-95">
     <div class="container">
-        <div class="row">
-            <div style="left: 12%">
-                <div class="col-sm-12 col-md-12 col-xs-12">
-                    <h2 style="text-align: center; color: brown; text-transform: uppercase; font-size: 25px;">Danh sách các dự án mới nhất</h2>
-                    <p style="">Các dự án sẽ được chúng tôi cập nhật liên tục!</p>
-                </div>
-                @foreach ($projects as $project)
-                <div class="col-sm-6 col-md-3 col-xs-12 text-center">
-                        <div class="product-entry">
-                            <div class="product-img" style="background-image: url(public/backend/img/{{ $project->img }});">
-                            </div>
-                            <div class="desc">
-                                <h3><a href="project-detail/{{ $project->id }}">{{ $project->name }}</a></h3>
-                            </div>
-                        </div>
-                </div>
-                @endforeach
-                <div class="row">
-                    <div class="col-md-12">
-                       {{ $projects->links() }}
-                    </div>
-                </div>
-            </div>
+        <div class="breadcrumb-content text-center">
+            <h2>DANH SÁCH CÁC DỰ ÁN MỚI NHẤT</h2>
         </div>
     </div>
 </div>
+<div class="blog-area pt-60 pb-100 clearfix">
+    <div class="container">
+        <div class="row">
+            @for($i=0; $i < 6 ; $i++)  
+                <div class="col-lg-6 col-md-6">
+                    <div class="blog-wrapper mb-30 gray-bg">
+                        <div class="blog-img hover-effect">
+                            <a href="http://cndco.local/project-detail/7"><img alt="" src="{{url('public/frontend/images/nt-01.jpg')}}"></a>
+                        </div>
+                        <div class="blog-content">
+                            <h4 class="text-center"><a href="http://cndco.local/project-detail/7">DỰ ÁN CND</a></h4>
+                        </div>
+                    </div>
+                </div>
+            @endfor
+        </div>
+        <div class="pagination-style text-center mt-20">
+            <ul>
+                <li>
+                    <a href="#"><i class="icon-arrow-left"></i></a>
+                </li>
+                <li>
+                    <a href="#">1</a>
+                </li>
+                <li>
+                    <a href="#">2</a>
+                </li>
+                <li>
+                    <a class="active" href="#"><i class="icon-arrow-right"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
 @endsection
