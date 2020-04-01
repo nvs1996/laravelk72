@@ -19,7 +19,7 @@ Route::get('ajax','frontend\indexController@GetAjax');
 Route::get('xuly','frontend\indexController@PostAjax');
 
 
-Route::get('','frontend\indexController@GetIndex');
+Route::get('index','frontend\indexController@GetIndex');
 Route::get('about','frontend\indexController@GetIndex');
 Route::get('cost','frontend\CostController@getCost');
 Route::get('construction-detail/{id}','frontend\ConstructionController@GetConstructionDetail');
