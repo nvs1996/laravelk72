@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Marten - Pet Food eCommerce Bootstrap4 Template</title>
+        <title>CND Company</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Favicon -->
@@ -31,7 +31,7 @@
                         <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-5">
                             <div class="logo" >
                                 <!--{{url('public/frontend/images/logo.jpg')}}-->
-                                <a href="http://cndco.local/"><img alt="" src="{{url('public/frontend/images/logo.jpg')}}"></a>
+                                <a href="index"><img alt="" src="{{url('public/frontend/images/logo.jpg')}}"></a>
                             </div>
                         </div>
                         <!--MENU-->
@@ -39,9 +39,9 @@
                             <div class="main-menu text-center">
                                 <nav>
                                     <ul>
-                                        <li><a href="http://cndco.local/">Trang chủ</a>
+                                        <li><a href="index">Trang chủ</a>
                                         </li>
-                                        <li><a href="http://cndco.local/product">Sản phẩm</a>
+                                        <li><a href="product">Sản phẩm</a>
                                             <ul class="submenu">
                                                 <li>
                                                 <a href="http://cndco.local/product_by_category/11">Gạch lát nền</a>
@@ -57,16 +57,14 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li><a href="http://cndco.local/cost">Lĩnh vực khác</a>
+                                        <li><a href="#">Lĩnh vực khác</a>
                                             <ul class="submenu">
-                                                <li><a href="http://cndco.local/construction">Công trình</a></li>
-                                                <li><a href="#">Lĩnh vực khác 2</a></li>
-                                                <li><a href="#">Lĩnh vực khác 2</a></li>
-                                                <li><a href="#">Lĩnh vực khác 2</a></li>
+                                                <li><a href="construction">Công trình</a></li>
+                                                <li><a href="cost">Bảng giá sửa chữa và cải tạo nhà</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="http://cndco.local/project">dự án</a></li>
-                                        <li><a href="http://cndco.local/lien-he">Liên hệ</a></li>
+                                        <li><a href="project">dự án</a></li>
+                                        <li><a href="lien-he">Liên hệ</a></li>
                                        
                                     </ul>
                                 </nav>

@@ -50,7 +50,7 @@
 		<div class="row">
 			<div class="col-lg-4 col-md-4">
 				<div class="single-food-category cate-padding-1 text-center mb-30">
-					<a href="http://cndco.local/product_by_category/11">
+					<a href="product_by_category/11">
 						<div class="single-food-hover-2">
 							<img src="{{url('public/frontend/images/tintuc3.jpg')}}" alt="">
 						</div>
@@ -62,7 +62,7 @@
 			</div>
 			<div class="col-lg-4 col-md-4">
 				<div class="single-food-category cate-padding-1 text-center mb-30">
-					<a href="http://cndco.local/product_by_category/11">
+					<a href="product_by_category/11">
 						<div class="single-food-hover-2">
 							<img src="{{url('public/frontend/images/tintuc3.jpg')}}" alt="">
 						</div>
@@ -74,7 +74,7 @@
 			</div>
 			<div class="col-lg-4 col-md-4">
 				<div class="single-food-category cate-padding-1 text-center mb-30">
-					<a href="http://cndco.local/product_by_category/11">
+					<a href="product_by_category/11">
 						<div class="single-food-hover-2">
 							<img src="{{url('public/frontend/images/tintuc3.jpg')}}" alt="">
 						</div>
@@ -86,7 +86,7 @@
 			</div>
 			<div class="col-lg-4 col-md-4">
 				<div class="single-food-category cate-padding-1 text-center mb-30">
-					<a href="http://cndco.local/product_by_category/11">
+					<a href="product_by_category/11">
 						<div class="single-food-hover-2">
 							<img src="{{url('public/frontend/images/tintuc3.jpg')}}" alt="">
 						</div>
@@ -98,7 +98,7 @@
 			</div>
 			<div class="col-lg-4 col-md-4">
 				<div class="single-food-category cate-padding-1 text-center mb-30">
-					<a href="http://cndco.local/product_by_category/11">
+					<a href="product_by_category/11">
 						<div class="single-food-hover-2">
 							<img src="{{url('public/frontend/images/tintuc3.jpg')}}" alt="">
 						</div>
@@ -110,7 +110,7 @@
 			</div>
 			<div class="col-lg-4 col-md-4">
 				<div class="single-food-category cate-padding-1 text-center mb-30">
-					<a href="http://cndco.local/product_by_category/11">
+					<a href="product_by_category/11">
 						<div class="single-food-hover-2">
 							<img src="{{url('public/frontend/images/tintuc3.jpg')}}" alt="">
 						</div>
@@ -133,12 +133,12 @@
 			<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
 				<div class="product-wrapper mb-10">
 					<div class="product-img">
-						<a href="http://cndco.local/product/detail/14">
+						<a href="product/detail/14">
 							<img src="{{url('public/frontend/images/LZ0XlxAAV.jpg')}}" alt="">
 						</a>
 					</div>
 					<div class="product-content">
-						<h4><a href="http://cndco.local/product/detail/14">PORCELAIN MEN KIM CƯƠNG SIÊU BÓNG KC89001</a></h4>
+						<h4><a href="product/detail/14">PORCELAIN MEN KIM CƯƠNG SIÊU BÓNG KC89001</a></h4>
 						<div class="product-price">
 							<span class="new">260,000 đ</span>
 						</div>

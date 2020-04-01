@@ -69,17 +69,19 @@
 			<li @yield('construction')><a href="admin/construction/index"><svg class="glyph stroked notepad ">
 				<use xlink:href="#stroked-notepad" />
 				</svg> Quản lý công trình </a></li>	
+			<li @yield('cost')><a href="admin/cost/index"><svg class="glyph stroked clipboard with paper">
+				<use xlink:href="#stroked-clipboard-with-paper" />
+				</svg> Bảng giá cải tạo sửa chữa nhà </a></li>	
 			<li @yield('slide')><a href="admin/slide/index"><svg class="glyph stroked notepad ">
 				<use xlink:href="#stroked-notepad" />
-				</svg> Quản lý slide </a></li>		
-			<div class="dropdown">
+				</svg> Quản lý slide </a></li>	
+			<!-- <div class="dropdown">
 			 	<button class="dropbtn"><i class="fa fa-bars" style="padding-right: 16px; margin-left: -10px; "></i>Quản lý lĩnh vực khác</button>
 		 		<div class="dropdown-content">
 				    <a href="admin/cost/index">Bảng giá cải tạo sửa chữa nhà</a>
-				    <a href="#">Công trình thi công</a>
 				</div>
-			</div>
-			<li><a href="#"><svg class="glyph stroked male-user">
+			</div> -->
+			<li><a href="index"><svg class="glyph stroked male-user">
 				<use xlink:href="#stroked-male-user"></use>
 				</svg> Trang bán hàng</a></li>
 

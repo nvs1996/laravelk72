@@ -17,12 +17,12 @@
                         <div class="col-lg-4 col-md-4">
                             <div class="blog-wrapper mb-30 gray-bg">
                                 <div class="blog-img hover-effect">
-                                    <a href="http://cndco.local/construction-detail/1">
+                                    <a href="construction-detail/1">
                                         <img alt="" src="{{url('public/frontend/images/1-1.jpg')}}">
                                     </a>
                                 </div>
                                 <div class="blog-content">
-                                    <h4><a href="http://cndco.local/construction-detail/1">Lorem ipsum dolor amet cons adipisicing elit</a></h4>
+                                    <h4><a href="construction-detail/1">Lorem ipsum dolor amet cons adipisicing elit</a></h4>
                                 </div>
                             </div>
                         </div>

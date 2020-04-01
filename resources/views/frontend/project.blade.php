@@ -16,10 +16,10 @@
                 <div class="col-lg-6 col-md-6">
                     <div class="blog-wrapper mb-30 gray-bg">
                         <div class="blog-img hover-effect">
-                            <a href="http://cndco.local/project-detail/7"><img alt="" src="{{url('public/frontend/images/nt-01.jpg')}}"></a>
+                            <a href="project-detail/7"><img alt="" src="{{url('public/frontend/images/nt-01.jpg')}}"></a>
                         </div>
                         <div class="blog-content">
-                            <h4 class="text-center"><a href="http://cndco.local/project-detail/7">DỰ ÁN CND</a></h4>
+                            <h4 class="text-center"><a href="project-detail/7">DỰ ÁN CND</a></h4>
                         </div>
                     </div>
                 </div>
