@@ -57,7 +57,7 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li><a href="#">Lĩnh vực khác</a>
+                                        <li><a href="">Lĩnh vực khác</a>
                                             <ul class="submenu">
                                                 <li><a href="construction">Công trình</a></li>
                                                 <li><a href="cost">Bảng giá sửa chữa và cải tạo nhà</a></li>
