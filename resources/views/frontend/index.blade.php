@@ -123,7 +123,7 @@
 		</div>
 	</div>
 </div>
-<div class="product-area pt-95 pb-70 gray-bg">
+<div class="product-area pt-45 pb-70 gray-bg">
 	<div class="container">
 		<div class="section-title text-center mb-55">
 			<h3>SẢN PHẨM ĐƯỢC QUAN TÂM NHIỀU NHẤT</h3>

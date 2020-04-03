@@ -37,6 +37,15 @@
   height: 100%;
 }
 
+.main-menu li a {
+  font-size: 16px;
+}
+
+.main-menu li a.main-menu-1 {
+  padding-top: 40px;
+  line-height: 80px;
+}
+
 .product-wrapper .product-img {
   position: relative;
 }
@@ -62,7 +71,7 @@
 
 .cate-padding-1 .single-food-content > h3 {
   padding: 15px 30px;
-  font-family: initial;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 25px;
 }
 

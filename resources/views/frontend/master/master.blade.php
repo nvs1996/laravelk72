@@ -35,13 +35,13 @@
                             </div>
                         </div>
                         <!--MENU-->
-                        <div class="col-xl-8 col-lg-7 d-none d-lg-block">
+                        <div class="col-xl-9 col-lg-8 d-none d-lg-block">
                             <div class="main-menu text-center">
                                 <nav>
                                     <ul>
-                                        <li><a href="index">Trang chủ</a>
+                                        <li><a class="main-menu-1" href="index">Trang chủ</a>
                                         </li>
-                                        <li><a href="product">Sản phẩm</a>
+                                        <li><a class="main-menu-1" href="product">Sản phẩm</a>
                                             <ul class="submenu">
                                                 <li>
                                                 <a href="http://cndco.local/product_by_category/11">Gạch lát nền</a>
@@ -57,20 +57,20 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li><a href="">Lĩnh vực khác</a>
+                                        <li><a class="main-menu-1" href="">Lĩnh vực khác</a>
                                             <ul class="submenu">
                                                 <li><a href="construction">Công trình</a></li>
                                                 <li><a href="cost">Bảng giá sửa chữa và cải tạo nhà</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="project">dự án</a></li>
-                                        <li><a href="lien-he">Liên hệ</a></li>
+                                        <li><a class="main-menu-1" href="project">dự án</a></li>
+                                        <li><a class="main-menu-1" href="lien-he">Liên hệ</a></li>
                                        
                                     </ul>
                                 </nav>
                             </div>
                         </div>
-                        <div class="col-xl-2 col-lg-2 col-md-8 col-sm-8 col-7">
+                        <div class="col-xl-1 col-lg-1 col-md-8 col-sm-8 col-7">
                             <div class="search-login-cart-wrapper">
                                 <div class="header-search same-style">
                                     <button class="search-toggle">
