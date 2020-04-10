@@ -9,7 +9,7 @@
                 <div class="grid-list-product-wrapper">
                     <div class="product-view product-grid">
                         <div class="row">
-                            @for ($i = 0; $i < 9; $i++)
+                            @foreach ($products as $product)
                                 <div class="product-width col-lg-6 col-xl-4 col-md-6 col-sm-6">
                                     <div class="product-wrapper mb-10">
                                         <div class="product-img">
@@ -18,30 +18,17 @@
                                             </a>
                                         </div>
                                         <div class="product-content">
-                                            <h4><a href="product/detail/14">PORCELAIN MEN KIM CƯƠNG SIÊU BÓNG KC89001</a></h4>
+                                            <h4><a href="product/detail/14">{{ $product->name }}</a></h4>
                                             <div class="product-price">
-                                                <span class="new">260,000 đ</span>
+                                                <span class="new">{{number_format( $product->price,0,'',',') }} đ</span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            @endfor
+                            @endforeach
                         </div>
                         <div class="pagination-style text-center mt-10">
-                            <ul>
-                                <li>
-                                    <a href="#"><i class="icon-arrow-left"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#">1</a>
-                                </li>
-                                <li>
-                                    <a href="#">2</a>
-                                </li>
-                                <li>
-                                    <a class="active" href="#"><i class="icon-arrow-right"></i></a>
-                                </li>
-                            </ul>
+                            {{ $products->links() }}
                         </div>
                     </div>
                 </div>
@@ -53,18 +40,22 @@
                         <h4 class="shop-sidebar-title">Danh mục</h4>
                         <nav id="sidebar" class="shop-list-style mt-20">
                             <ul class="list-unstyled components slidebar-menu">
-                                @for($j = 0; $j < 3 ; $j++)
+                                @foreach ($category as $cate)
+                                @if ($cate->parent==0)
                                 <li class="active">
-                                    <a href="#homeSubmenu-{{$j}}" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle menu-dropdown-toggle">Gạch lát nền</a>
-                                    <ul class="collapse list-unstyled" id="homeSubmenu-{{$j}}">
-                                        @for($i = 0; $i < 3 ; $i++)
+                                    <a href="#homeSubmenu-{{ $cate->id }}" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle menu-dropdown-toggle">{{ $cate->name }}</a>
+                                    <ul class="collapse list-unstyled" id="homeSubmenu-{{ $cate->id }}">
+                                        @foreach ($category as $item)
+                                            @if ($item->parent==$cate->id)
                                             <li>
-                                                <a href="#">800x800</a>
+                                                <a href="#">{{ $item->name }}</a>
                                             </li>
-                                        @endfor
+                                            @endif
+                                        @endforeach
                                     </ul>
                                 </li>
-                                @endfor
+                                @endif
+                                @endforeach
                             </ul>
                         </nav>
                     </div>

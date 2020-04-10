@@ -13,7 +13,7 @@
         <div class="row flex-row-reverse">
             <div class="col-lg-12 col-md-12">
                 <div class="row">
-                    @for($i=0; $i < 6; $i++)
+                    @foreach ($constructions as $construction)
                         <div class="col-lg-4 col-md-4">
                             <div class="blog-wrapper mb-30 gray-bg">
                                 <div class="blog-img hover-effect">
@@ -22,14 +22,15 @@
                                     </a>
                                 </div>
                                 <div class="blog-content">
-                                    <h4><a href="construction-detail/1">Lorem ipsum dolor amet cons adipisicing elit</a></h4>
+                                    <h4><a href="construction-detail/{{ $construction->id }}">{{ $construction->name }}</a></h4>
                                 </div>
                             </div>
                         </div>
-                    @endfor
+                    @endforeach
                 </div>
                 <div class="pagination-style text-center mt-10">
-                    <ul>
+                    {{ $constructions->links() }}
+                    <!-- <ul>
                         <li>
                             <a href="#"><i class="icon-arrow-left"></i></a>
                         </li>
@@ -42,7 +43,7 @@
                         <li>
                             <a class="active" href="#"><i class="icon-arrow-right"></i></a>
                         </li>
-                    </ul>
+                    </ul> -->
                 </div>
             </div>
             

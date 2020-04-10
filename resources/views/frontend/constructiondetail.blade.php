@@ -5,7 +5,7 @@
 <div class="breadcrumb-area pt-95 bg-img" style="background-image:url(assets/img/banner/banner-2.jpg);">
     <div class="container">
         <div class="breadcrumb-content text-center">
-        <h2>Nhà phố anh Hạ (Diễn Châu, Nghệ An)</h2>
+        <h2>{{ $constructions->name }}</h2>
         </div>
     </div>
 </div>
@@ -16,58 +16,22 @@
                 <div class="blog-details-wrapper res-mrg-top">
                     <div class="single-blog-wrapper">
                         <div class="blog-img mb-30">
-                            <img src="{{url('public/frontend/images/1-1.jpg')}}" alt="">
+                            <img src="{{url('<?php echo env('APP_URL').'/' ?> public/frontend/images/<?php echo $constructions->img?>')}}" alt="">
                         </div>
                         <div class="blog-details-content">
                            
                         </div>
-                        <p>Thiết kế nhà phố mang phong cách hiện đại trẻ trung thể hiện được vẻ đẹp thẩm mỹ cao, không gian sống thoáng mát và công năng sử dụng tối ưu. Chắc chắn mẫu thiết kế nhà đẹp này sẽ là sự lựa chọn hoàn hảo nhất cho mái ấm tương lai của gia đình bạn. Thiết kế nhà phố được thiết kế theo lối hiện đại, các đường nét thiết kế kiến trúc đều có sự liên kết chặt chẽ với nhau thể hiện được vẻ đẹp rất tối ưu và nổi bật.
-                            Chủ đầu tư: Anh Hạ
-                            Đơn vị thiết kế và thi cộng: CND Architecture
-                            Địa điểm: Diễn Châu – Nghệ An
-                            Diện tích: 140m2
-                            Dự kiến hoàn thành: T6/2018
-                            Chi phí hoàn thiện: 550.000.000 (VNĐ)Thiết kế nhà phố mang phong cách hiện đại trẻ trung thể hiện được vẻ đẹp thẩm mỹ cao, không gian sống thoáng mát và công năng sử dụng tối ưu. Chắc chắn mẫu thiết kế nhà đẹp này sẽ là sự lựa chọn hoàn hảo nhất cho mái ấm tương lai của gia đình bạn. Thiết kế nhà phố được thiết kế theo lối hiện đại, các đường nét thiết kế kiến trúc đều có sự liên kết chặt chẽ với nhau thể hiện được vẻ đẹp rất tối ưu và nổi bật.
-                            Chủ đầu tư: Anh Hạ
-                            Đơn vị thiết kế và thi cộng: CND Architecture
-                            Địa điểm: Diễn Châu – Nghệ An
-                            Diện tích: 140m2
-                            Dự kiến hoàn thành: T6/2018
-                            Chi phí hoàn thiện: 550.000.000 (VNĐ)Thiết kế nhà phố mang phong cách hiện đại trẻ trung thể hiện được vẻ đẹp thẩm mỹ cao, không gian sống thoáng mát và công năng sử dụng tối ưu. Chắc chắn mẫu thiết kế nhà đẹp này sẽ là sự lựa chọn hoàn hảo nhất cho mái ấm tương lai của gia đình bạn. Thiết kế nhà phố được thiết kế theo lối hiện đại, các đường nét thiết kế kiến trúc đều có sự liên kết chặt chẽ với nhau thể hiện được vẻ đẹp rất tối ưu và nổi bật.
-                            Chủ đầu tư: Anh Hạ
-                        </p>
+                        <p> {{ $constructions->detail }}</p>
                         <div class="dec-img-wrapper">
                             <div class="row justify-content-md-center">
                                 <div class="col-md-6 col-sm-6">
                                     <div class="dec-img">
-                                        <img src="{{url('public/frontend/images/nt-01.jpg')}}" alt="">
+                                        <img style="background-image: url(public/backend/img/{{ $constructions->img }});" alt="">
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <p> Đơn vị thiết kế và thi cộng: CND Architecture
-                            Địa điểm: Diễn Châu – Nghệ An
-                            Diện tích: 140m2
-                            Dự kiến hoàn thành: T6/2018
-                            Chi phí hoàn thiện: 550.000.000 (VNĐ)Thiết kế nhà phố mang phong cách hiện đại trẻ trung thể hiện được vẻ đẹp thẩm mỹ cao, không gian sống thoáng mát và công năng sử dụng tối ưu. Chắc chắn mẫu thiết kế nhà đẹp này sẽ là sự lựa chọn hoàn hảo nhất cho mái ấm tương lai của gia đình bạn. Thiết kế nhà phố được thiết kế theo lối hiện đại, các đường nét thiết kế kiến trúc đều có sự liên kết chặt chẽ với nhau thể hiện được vẻ đẹp rất tối ưu và nổi bật.
-                            Chủ đầu tư: Anh Hạ
-                            Đơn vị thiết kế và thi cộng: CND Architecture
-                            Địa điểm: Diễn Châu – Nghệ An
-                            Diện tích: 140m2
-                            Dự kiến hoàn thành: T6/2018
-                            Chi phí hoàn thiện: 550.000.000 (VNĐ)Thiết kế nhà phố mang phong cách hiện đại trẻ trung thể hiện được vẻ đẹp thẩm mỹ cao, không gian sống thoáng mát và công năng sử dụng tối ưu. Chắc chắn mẫu thiết kế nhà đẹp này sẽ là sự lựa chọn hoàn hảo nhất cho mái ấm tương lai của gia đình bạn. Thiết kế nhà phố được thiết kế theo lối hiện đại, các đường nét thiết kế kiến trúc đều có sự liên kết chặt chẽ với nhau thể hiện được vẻ đẹp rất tối ưu và nổi bật.
-                            Chủ đầu tư: Anh Hạ
-                            Đơn vị thiết kế và thi cộng: CND Architecture
-                            Địa điểm: Diễn Châu – Nghệ An
-                            Diện tích: 140m2
-                            Dự kiến hoàn thành: T6/2018
-                            Chi phí hoàn thiện: 550.000.000 (VNĐ)Thiết kế nhà phố mang phong cách hiện đại trẻ trung thể hiện được vẻ đẹp thẩm mỹ cao, không gian sống thoáng mát và công năng sử dụng tối ưu. Chắc chắn mẫu thiết kế nhà đẹp này sẽ là sự lựa chọn hoàn hảo nhất cho mái ấm tương lai của gia đình bạn. Thiết kế nhà phố được thiết kế theo lối hiện đại, các đường nét thiết kế kiến trúc đều có sự liên kết chặt chẽ với nhau thể hiện được vẻ đẹp rất tối ưu và nổi bật.
-                            Chủ đầu tư: Anh Hạ
-                            Đơn vị thiết kế và thi cộng: CND Architecture
-                            Địa điểm: Diễn Châu – Nghệ An
-                            Diện tích: 140m2
-                            Dự kiến hoàn thành: T6/2018
-                            Chi phí hoàn thiện: 550.000.000 (VNĐ)</p>
+                        <p> {{ $constructions->detail2 }}</p>
                     </div>
                 </div>
             </div>
