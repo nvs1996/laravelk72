@@ -30,20 +30,30 @@
                     </div>
                     <div class="col-lg-6 col-md-6">
                         <div class="product-details-content">
-                            <h2>PORCELAIN MEN KIM CƯƠNG SIÊU BÓNG KC89001</h2>
+                            <h2>{{ $product->name }}</h2>
                             <div class="product-price">
-                                <span class="new">$20.00 </span>
+                                <span class="new">{{number_format( $product->price,0,'',',') }} đ</span>
                             </div>
                             <div class="in-stock">
-                                <span><i class="ion-android-checkbox-outline"></i>Còn Hàng</span>
+                                 @if ($product->state==1)
+                                    <span><i class="ion-android-checkbox-outline"></i>Còn Hàng</span>
+                                @else
+                                    <span><i class="ion-android-checkbox-outline"></i>Hết Hàng</span>
+                                @endif
                             </div>
-                            <p>PORCELAIN MEN KIM CƯƠNG SIÊU BÓNG KC89001 Kích thước: 800x800mm Chất liệu: Porcelain, phẳng Công nghệ: Kim cương NANO siêu bóng Màu: Xám tro - vân đá rễ cây Bề mặt : Bề mặt: phẳng - siêu bóng, được phủ lớp men Kim Cương siêu cứng giúp chống trầy xước tốt Độ bóng đạt 99%, Bóng nhưng không trơn - trượt</p>
-                            <p>PORCELAIN MEN KIM CƯƠNG SIÊU BÓNG KC89001 Kích thước: 800x800mm Chất liệu: Porcelain, phẳng Công nghệ: Kim cương NANO siêu bóng Màu: Xám tro - vân đá rễ cây Bề mặt : Bề mặt: phẳng - siêu bóng, được phủ lớp men Kim Cương siêu cứng giúp chống trầy xước tốt Độ bóng đạt 99%, Bóng nhưng không trơn - trượt</p>
+                            <p>{{ $product->info }}</p>
+                            <p>{{ $product->info1 }}</p>
+                            <p>{{ $product->info2 }}</p>
+                            <p>{{ $product->info3 }}</p>
+                            <p>{{ $product->info4 }}</p>
+                            <p>{{ $product->info5 }}</p>
+                            <p>{{ $product->info6 }}</p>
+                            <p>{{ $product->describe }}</p>
                            
                             
                             <div class="product-list-action">
                                 <div class="product-list-action-left">
-                                    <a class="addtocart-btn" href="#" title="Add to cart">
+                                    <a class="addtocart-btn" href="{{ route('lien_he') }}" title="Add to cart">
                                         <i class="ion-bag"></i>
                                         Liên hệ đặt hàng
                                     </a>

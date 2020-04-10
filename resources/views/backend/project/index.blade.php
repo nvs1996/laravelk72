@@ -56,7 +56,7 @@ class="active"
 											<td>{{$project->id}}</td>
 											<td>
 												<div class="row">
-												<div class="col-md-3"><img src="public/backend/img/{{$project->img}}" alt="Áo đẹp" width="100px" class="thumbnail"></div>
+												<div class="col-md-3"><img src="public/backend/img/{{$project->img}}" alt="Chưa có ảnh" width="100px" class="thumbnail"></div>
 												</div>
 											</td>
 											<td>

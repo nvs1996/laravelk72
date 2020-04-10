@@ -31,7 +31,7 @@
                         <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-5">
                             <div class="logo" >
                                 <!--{{url('public/frontend/images/logo.jpg')}}-->
-                                <a href="index"><img alt="" src="{{url('public/frontend/images/logo.jpg')}}"></a>
+                                <a href="{{route('index.frontend')}}"><img alt="" src="{{url('public/frontend/images/logo.jpg')}}"></a>
                             </div>
                         </div>
                         <!--MENU-->
@@ -39,32 +39,34 @@
                             <div class="main-menu text-center">
                                 <nav>
                                     <ul>
-                                        <li><a class="main-menu-1" href="index">Trang chủ</a>
+                                        <?php 
+                                            $category = App\models\category::where('parent','0')->get();
+                                        ?>
+                                        <li><a class="main-menu-1" href="{{route('index.frontend')}}">Trang chủ</a>
                                         </li>
-                                        <li><a class="main-menu-1" href="product">Sản phẩm</a>
+                                        <li><a class="main-menu-1" href="{{ route('product') }}">Sản phẩm</a>
                                             <ul class="submenu">
-                                                <li>
-                                                <a href="http://cndco.local/product_by_category/11">Gạch lát nền</a>
-                                                    <ul class="submenu-2">
-                                                        <li><a href="http://cndco.local/product/detail/14">800x800mm</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                <a href="#">Gạch ốp</a>
-                                                    <ul class="submenu-2">
-                                                        <li><a href="#">800x800mm</a></li>
-                                                    </ul>
-                                                </li>
+                                                @foreach ($category as $key)
+                                                    <li>
+                                                        <a href="">{{ $key->name }}</a>
+                                                        <ul class="submenu-2">
+                                                            <?php $category_child = App\models\category::where('parent',$key->id)->get(); ?>
+                                                            @foreach ($category_child as $rc)
+                                                                <li><a href="product_by_category/{{$rc->id}}">{{ $rc->name }}</a></li>
+                                                            @endforeach
+                                                        </ul>
+                                                    </li>
+                                                @endforeach
                                             </ul>
                                         </li>
                                         <li><a class="main-menu-1" href="">Lĩnh vực khác</a>
                                             <ul class="submenu">
-                                                <li><a href="construction">Công trình</a></li>
-                                                <li><a href="cost">Bảng giá sửa chữa và cải tạo nhà</a></li>
+                                                <li><a href="{{ route('construction') }}">Công trình</a></li>
+                                                <li><a href="{{ route('cost') }}">Bảng giá sửa chữa và cải tạo nhà</a></li>
                                             </ul>
                                         </li>
-                                        <li><a class="main-menu-1" href="project">dự án</a></li>
-                                        <li><a class="main-menu-1" href="lien-he">Liên hệ</a></li>
+                                        <li><a class="main-menu-1" href="{{ route('project') }}">dự án</a></li>
+                                        <li><a class="main-menu-1" href="{{ route('lien_he') }}">Liên hệ</a></li>
                                        
                                     </ul>
                                 </nav>

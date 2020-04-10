@@ -5,28 +5,28 @@
 <div class="pt-95">
     <div class="container">
         <div class="breadcrumb-content text-center">
-            <h2>DANH SÁCH CÁC DỰ ÁN MỚI NHẤT</h2>
+            <h2>DANH SÁCH CÁC TIN TỨC MỚI NHẤT</h2>
         </div>
     </div>
 </div>
 <div class="blog-area pt-60 pb-100 clearfix">
     <div class="container">
         <div class="row">
-            @foreach ($projects as $project)
+            @foreach ($notifications as $notification)
                 <div class="col-lg-6 col-md-6">
                     <div class="blog-wrapper mb-30 gray-bg">
                         <div class="blog-img hover-effect">
-                            <a href="project-detail/7"><img alt="" src="{{url('public/frontend/images/nt-01.jpg')}}"></a>
+                            <a href="notification-detail/{{ $notification->id }}"><img alt="" src="{{url('public/frontend/images/nt-01.jpg')}}"></a>
                         </div>
                         <div class="blog-content">
-                            <h4 class="text-center"><a href="project-detail/7">{{ $project->name  }}</a></h4>
+                            <h4 class="text-center"><a href="notification-detail/{{ $notification->id }}">{{ $notification->title }}</a></h4>
                         </div>
                     </div>
                 </div>
             @endforeach
         </div>
         <div class="pagination-style text-center mt-20">
-            {{ $projects->links() }}
+             {{ $notifications->links() }}
         </div>
     </div>
 </div>

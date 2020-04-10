@@ -19,19 +19,21 @@ Route::get('ajax','frontend\indexController@GetAjax');
 Route::get('xuly','frontend\indexController@PostAjax');
 
 
-Route::get('index','frontend\indexController@GetIndex');
+Route::get('','frontend\indexController@GetIndex')->name('index.frontend');
 Route::get('about','frontend\indexController@GetIndex');
-Route::get('cost','frontend\CostController@getCost');
+Route::get('cost','frontend\CostController@getCost')->name('cost');;
+Route::get('notification','frontend\NotificationController@getNotification');
+Route::get('notification-detail/{id}','frontend\NotificationController@GetNotificationDetail');
 Route::get('construction-detail/{id}','frontend\ConstructionController@GetConstructionDetail');
-Route::get('construction','frontend\ConstructionController@getConstruction');
-Route::get('project','frontend\ProjectController@getProject');
+Route::get('construction','frontend\ConstructionController@getConstruction')->name('construction');;
+Route::get('project','frontend\ProjectController@getProject')->name('project');
 Route::get('project-detail/{id}','frontend\ProjectController@GetProjectDetail');
-Route::get('lien-he','frontend\indexController@LienHe');
+Route::get('lien-he','frontend\indexController@LienHe')->name('lien_he');
 Route::get('contact','frontend\indexController@GetIndex');
 Route::get('search','frontend\SearchController@GetKey')->name('search.product');
 Route::get('product_by_category/{id}','frontend\ProductByCategoryController@GetKey')->name('category.by.product');
 Route::group(['prefix' => 'product','namespace'=>'frontend'], function () {
-    Route::get('','ProductController@GetProduct');
+    Route::get('','ProductController@GetProduct')->name('product');;
     Route::get('detail/{id_product}','ProductController@GetDetail');
 
 

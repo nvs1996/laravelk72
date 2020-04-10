@@ -41,6 +41,7 @@ class="active"
 									<thead>
 		                                <tr bgcolor="#33b8ff">
 		                                    <th class="text-center">#</th>
+		                                    <th class="text-center">Thông tin dự án</th>
 		                                    <th class="text-center">Tiêu đề</th>
 		                                    <th class="text-center">Nội dung</th>
 		                                    <th>Thao tác</th>
@@ -50,8 +51,11 @@ class="active"
 		                                @foreach ($notifications as $notification)
 		                                <tr>
 		                                    <td class="text-center">{{ $notification->id }}</td>
-		                                    <td class="text-center">{{ $notification->title }}</td>
-		                                    <td class="text-center">{{ $notification->content }}</td>
+		                                    <td class="text-center" style="width:200px;"><img src="public/backend/img/{{$notification->img}}" alt="Chưa có ảnh" width="200px" class="thumbnail"></td>
+		                                    <td class="text-center" style="width:200px;">{{ $notification->title }}</td>
+		                                    <td class="text-center"><div style="width:200px; height: auto; word-wrap:break-word;">
+													{{ $notification->content }}
+												</div></td>
 		                                    <td>
 		                                        <div class="input-group-btn dropdown">
 		                                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Thao tác

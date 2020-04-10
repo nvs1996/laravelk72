@@ -26,12 +26,33 @@ class NotificationController extends Controller
 
     public function NotificationStore(Request $request)
     {
-        $params = $request->all();
-        $result = notification::create([
-            "title" => $params["title"],
-            "content" => $params["content"],
-        ]);
-        $result->save();
+        $notification =new notification;
+        $notification->title = $request->title;
+        $notification->content = $request->content;
+        $notification->content2 = $request->content2;
+        if($request->hasFile('product_img'))
+        {
+            $file = $request->product_img;
+            $filename= str_random(9).'.'.$file->getClientOriginalExtension();
+            $file->move('public/backend/img', $filename);
+            $notification->img=$filename;
+        }
+        else
+        {
+            $notification->img='no-img.jpg';
+        }
+        if($request->hasFile('product_img2'))
+        {
+            $file = $request->product_img2;
+            $filename= str_random(9).'.'.$file->getClientOriginalExtension();
+            $file->move('public/backend/img', $filename);
+            $notification->img2 = $filename;
+        }
+        else
+        {
+            $notification->img2='no-img.jpg';
+        }
+        $notification->save();
         return Redirect::route('notification.index')->with(["thongbao"=>"Tạo tin tức thành công!"]);
     }
     public function NotificationEdit($id)
@@ -43,10 +64,25 @@ class NotificationController extends Controller
     }
 
     public function NotificationUpdate(Request $request,$id){
-        $notifications = notification::find($id);
-        $notifications->title = $request->title;
-        $notifications->content = $request->content;
-        $notifications->save();
+        $notification = notification::find($id);
+        $notification->title = $request->title;
+        $notification->content = $request->content;
+        $notification->content2 = $request->content2;
+        if($request->hasFile('product_img'))
+        {
+            $file = $request->img;
+            $filename= str_random(9).'.'.$file->getClientOriginalExtension();
+            $file->move('public/backend/img', $filename);
+            $notification->img=$filename;
+        }
+        if($request->hasFile('product_img2'))
+        {
+            $file = $request->product_img2;
+            $filename= str_random(9).'.'.$file->getClientOriginalExtension();
+            $file->move('public/backend/img', $filename);
+            $notification->img2 = $filename;
+        }
+        $notification->save();
         return Redirect::route('notification.index')->with('thongbao','Đã sửa tin tức thành công');
     }
 

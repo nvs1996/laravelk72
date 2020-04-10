@@ -8,7 +8,7 @@ class notification extends Model
 {
     protected $table='notifications';
     protected $fillable = [
-        'title', 'content'
+        'title', 'content', 'img', 'img2', 'content2'
     ];
     public $timestamps =false;
 }

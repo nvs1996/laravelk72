@@ -43,7 +43,7 @@ class="active"
                         <label>Ảnh sản phẩm</label>
                         <input id="img" type="file" name="product_img" class="form-control hidden"
                             onchange="changeImg(this)">
-                        <img id="avatar" class="thumbnail" width="100%" height="350px" src="public/backend/img/{{ $projects->img }}">
+                        <img id="avatar" class="thumbnail" width="60%" height="200px" src="public/backend/img/{{ $projects->img }}">
                     </div>
                     <div class="form-group">
                         <label>Nội dung phụ(*)</label>
@@ -51,9 +51,9 @@ class="active"
                     </div>
                     <div class="form-group">
                         <label>Ảnh phụ của dự án</label>
-                        <input id="img" type="file" name="product_img2" class="form-control hidden"
+                        <input id="img1" type="file" name="product_img2" class="form-control hidden"
                             onchange="changeImg(this)">
-                        <img id="avatar" class="thumbnail" width="60%" height="200px" src="public/backend/img/{{ $projects->img2 }}">
+                        <img id="avatar1" class="thumbnail" width="60%" height="200px" src="public/backend/img/{{ $projects->img2 }}">
                     </div>
                 </div>
             </div>
@@ -70,24 +70,42 @@ class="active"
 </div>
 @endsection
 @section('script')
-@parent
-<script>
-    function changeImg(input) {
-        //Nếu như tồn thuộc tính file, đồng nghĩa người dùng đã chọn file mới
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-            //Sự kiện file đã được load vào website
-            reader.onload = function (e) {
-                //Thay đổi đường dẫn ảnh
-                $('#avatar').attr('src', e.target.result);
+ @parent
+    <script>
+        function changeImg(input) {
+            //Nếu như tồn thuộc tính file, đồng nghĩa người dùng đã chọn file mới
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                //Sự kiện file đã được load vào website
+                reader.onload = function (e) {
+                    //Thay đổi đường dẫn ảnh
+                    $('#avatar').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(input.files[0]);
             }
-            reader.readAsDataURL(input.files[0]);
         }
-    }
-    $(document).ready(function () {
-        $('#avatar').click(function () {
-            $('#img').click();
+        $(document).ready(function () {
+            $('#avatar').click(function () {
+                $('#img').click();
+            });
         });
-    });
-</script>
+        function changeImg1(input) {
+            //Nếu như tồn thuộc tính file, đồng nghĩa người dùng đã chọn file mới
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                //Sự kiện file đã được load vào website
+                reader.onload = function (e) {
+                    //Thay đổi đường dẫn ảnh
+                    $('#avatar1').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+        $(document).ready(function () {
+            $('#avatar1').click(function () {
+                $('#img1').click();
+            });
+        });
+
+    </script>
 @endsection

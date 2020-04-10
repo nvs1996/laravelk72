@@ -67,9 +67,9 @@ class ProjectController extends Controller
         $projects = project::find($id);
         $projects->name = $request->name;
         $projects->detail = $request->detail;
-        if($request->hasFile('img'))
+        if($request->hasFile('product_img'))
         {
-            $file = $request->img;
+            $file = $request->product_img;
             $filename= str_random(9).'.'.$file->getClientOriginalExtension();
             $file->move('public/backend/img', $filename);
             $projects->img=$filename;

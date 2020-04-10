@@ -11,13 +11,13 @@
 						<div class="slider-content slider-animated-1 pt-114">
 							<h1 class="animated">Tin tức mới nhất của CND</h1>
 							<div class="slider-btn">
-								<a class="animated" href="">Đọc ngay</a>
+								<a class="animated" href="notification">Đọc ngay</a>
 							</div>
 						</div>
 					</div>
 					<div class="col-lg-6 col-md-6 col-12 col-sm-5">
 						<div class="slider-single-img slider-animated-1">
-							<img class="animated" src="{{url('public/frontend/images/Thi-cong-nha-pho-BIET-THU.jpg')}}" alt="">
+							<img class="animated" src="{{url('public/frontend/images/LUYA11.jpg')}}" alt="">
 						</div>
 					</div>
 				</div>
@@ -62,7 +62,7 @@
 			</div>
 			<div class="col-lg-4 col-md-4">
 				<div class="single-food-category cate-padding-1 text-center mb-30">
-					<a href="product_by_category/11">
+					<a href="product_by_category/12">
 						<div class="single-food-hover-2">
 							<img src="{{url('public/frontend/images/tintuc3.jpg')}}" alt="">
 						</div>
@@ -74,7 +74,7 @@
 			</div>
 			<div class="col-lg-4 col-md-4">
 				<div class="single-food-category cate-padding-1 text-center mb-30">
-					<a href="product_by_category/11">
+					<a href="product_by_category/17">
 						<div class="single-food-hover-2">
 							<img src="{{url('public/frontend/images/tintuc3.jpg')}}" alt="">
 						</div>
@@ -86,7 +86,7 @@
 			</div>
 			<div class="col-lg-4 col-md-4">
 				<div class="single-food-category cate-padding-1 text-center mb-30">
-					<a href="product_by_category/11">
+					<a href="product_by_category/21">
 						<div class="single-food-hover-2">
 							<img src="{{url('public/frontend/images/tintuc3.jpg')}}" alt="">
 						</div>
@@ -98,7 +98,7 @@
 			</div>
 			<div class="col-lg-4 col-md-4">
 				<div class="single-food-category cate-padding-1 text-center mb-30">
-					<a href="product_by_category/11">
+					<a href="product_by_category/12">
 						<div class="single-food-hover-2">
 							<img src="{{url('public/frontend/images/tintuc3.jpg')}}" alt="">
 						</div>
@@ -110,7 +110,7 @@
 			</div>
 			<div class="col-lg-4 col-md-4">
 				<div class="single-food-category cate-padding-1 text-center mb-30">
-					<a href="product_by_category/11">
+					<a href="product_by_category/17">
 						<div class="single-food-hover-2">
 							<img src="{{url('public/frontend/images/tintuc3.jpg')}}" alt="">
 						</div>
@@ -129,23 +129,23 @@
 			<h3>SẢN PHẨM ĐƯỢC QUAN TÂM NHIỀU NHẤT</h3>
 		</div>
 		<div class="row">
-			@for($i=0; $i < 8 ; $i++)  
+			@foreach ($products as $product)
 			<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
 				<div class="product-wrapper mb-10">
 					<div class="product-img">
-						<a href="product/detail/14">
+						<a href="product/detail/{{ $product->id }}">
 							<img src="{{url('public/frontend/images/LZ0XlxAAV.jpg')}}" alt="">
 						</a>
 					</div>
 					<div class="product-content">
-						<h4><a href="product/detail/14">PORCELAIN MEN KIM CƯƠNG SIÊU BÓNG KC89001</a></h4>
+						<h4><a href="product/detail/{{ $product->id }}">{{ $product->name }}</a></h4>
 						<div class="product-price">
-							<span class="new">260,000 đ</span>
+							<span class="new">{{number_format( $product->price,0,'',',') }} đ</span>
 						</div>
 					</div>
 				</div>
 			</div>
-			@endfor
+			@endforeach
 		</div>
 	</div>
 </div>

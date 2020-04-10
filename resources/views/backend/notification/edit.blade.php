@@ -33,11 +33,32 @@ class="active"
                     <!-- /.form-group -->
                     <div class="form-group">
                         <label> Tiêu đề (*)</label>
-                        <input name="title" value="{{ $notifications->title }}" type="text" class="form-control" placeholder="Nhập vào tiêu đề tin tức" required>
+                        <input name="title" type="text" value="{{ $notifications->title }}" class="form-control" placeholder="Nhập vào tiêu đề tin tức" required>
                     </div>
                     <div class="form-group">
-                        <label>Nội dung (*)</label>
-                        <textarea name="content" class="form-control" placeholder="Nhập vào nội dung tin tức">{{ $notifications->content }}</textarea>
+                        <label>Nội dung chính(*)</label>
+                        <textarea name="content" class="form-control" placeholder="Nhập vào nội dung tin tức" required><?php echo ( $notifications->content ); ?></textarea>
+                    </div>
+                   <div class="form-group">
+                        <label>Ảnh chính của tin tức</label>
+                        @if ($errors->has('product_img'))
+                            <div class="alert alert-danger" role="alert">
+                                <strong>{{$errors->first('product_img')}}</strong>
+                            </div>
+                        @endif
+                        <input id="img" type="file" name="product_img" class="form-control hidden"
+                            onchange="changeImg(this)">
+                        <img id="avatar" class="thumbnail" width="60%" height="200px" src="public/backend/img/{{ $notifications->img }}">
+                    </div>
+                    <div class="form-group">
+                        <label>Nội dung phụ(*)</label>
+                        <textarea name="content2" class="form-control" placeholder="Nhập vào nội dung"><?php echo ( $notifications->content2 ); ?></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Ảnh phụ của tin tức</label>
+                        <input id="img2" type="file" name="product_img2" class="form-control hidden"
+                            onchange="changeImg1(this)">
+                        <img id="avatar1" class="thumbnail" width="60%" height="200px" src="public/backend/img/{{ $notifications->img2 }}">
                     </div>
                 </div>
                     
@@ -55,4 +76,42 @@ class="active"
 </div>
 @endsection
 @section('script')
+ @parent
+    <script>
+        function changeImg(input) {
+            //Nếu như tồn thuộc tính file, đồng nghĩa người dùng đã chọn file mới
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                //Sự kiện file đã được load vào website
+                reader.onload = function (e) {
+                    //Thay đổi đường dẫn ảnh
+                    $('#avatar').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+        $(document).ready(function () {
+            $('#avatar').click(function () {
+                $('#img').click();
+            });
+        });
+        function changeImg1(input) {
+            //Nếu như tồn thuộc tính file, đồng nghĩa người dùng đã chọn file mới
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                //Sự kiện file đã được load vào website
+                reader.onload = function (e) {
+                    //Thay đổi đường dẫn ảnh
+                    $('#avatar1').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+        $(document).ready(function () {
+            $('#avatar1').click(function () {
+                $('#img1').click();
+            });
+        });
+
+    </script>
 @endsection
