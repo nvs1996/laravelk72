@@ -52,7 +52,7 @@
                                                         <ul class="submenu-2">
                                                             <?php $category_child = App\models\category::where('parent',$key->id)->get(); ?>
                                                             @foreach ($category_child as $rc)
-                                                                <li><a href="product_by_category/{{$rc->id}}">{{ $rc->name }}</a></li>
+                                                                <li><a href="{{route('category.by.product', $rc->id)}}">{{ $rc->name }}</a></li>
                                                             @endforeach
                                                         </ul>
                                                     </li>
@@ -80,7 +80,7 @@
                                         <i class="ti-close s-close"></i>
                                     </button>
                                     <div class="search-content">
-                                        <form action="http://cndco.local/search">
+                                        <form action="{{ route('search.product') }}">
                                             <input type="text" placeholder="Search">
                                             <button>
                                                 <i class="icon-magnifier"></i>

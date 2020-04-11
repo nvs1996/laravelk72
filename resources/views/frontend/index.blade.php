@@ -134,7 +134,8 @@
 				<div class="product-wrapper mb-10">
 					<div class="product-img">
 						<a href="product/detail/{{ $product->id }}">
-							<img src="{{url('public/frontend/images/LZ0XlxAAV.jpg')}}" alt="">
+							<!-- <img src="{{url('public/frontend/images/LZ0XlxAAV.jpg')}}" alt=""> -->
+							<img src="{{asset('public/backend/img/')}}/<?php echo $product->img ?>" alt="">
 						</a>
 					</div>
 					<div class="product-content">

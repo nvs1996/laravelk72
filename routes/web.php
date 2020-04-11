@@ -25,16 +25,16 @@ Route::get('cost','frontend\CostController@getCost')->name('cost');;
 Route::get('notification','frontend\NotificationController@getNotification');
 Route::get('notification-detail/{id}','frontend\NotificationController@GetNotificationDetail');
 Route::get('construction-detail/{id}','frontend\ConstructionController@GetConstructionDetail');
-Route::get('construction','frontend\ConstructionController@getConstruction')->name('construction');;
+Route::get('construction','frontend\ConstructionController@getConstruction')->name('construction');
 Route::get('project','frontend\ProjectController@getProject')->name('project');
-Route::get('project-detail/{id}','frontend\ProjectController@GetProjectDetail');
+Route::get('project-detail/{id}','frontend\ProjectController@GetProjectDetail')->name('project-detail');
 Route::get('lien-he','frontend\indexController@LienHe')->name('lien_he');
 Route::get('contact','frontend\indexController@GetIndex');
 Route::get('search','frontend\SearchController@GetKey')->name('search.product');
 Route::get('product_by_category/{id}','frontend\ProductByCategoryController@GetKey')->name('category.by.product');
 Route::group(['prefix' => 'product','namespace'=>'frontend'], function () {
     Route::get('','ProductController@GetProduct')->name('product');;
-    Route::get('detail/{id_product}','ProductController@GetDetail');
+    Route::get('detail/{id_product}','ProductController@GetDetail')->name('product-detail');;
 
 
     Route::get('checkout','ProductController@GetCheckOut');

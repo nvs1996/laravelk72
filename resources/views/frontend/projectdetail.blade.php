@@ -8,7 +8,7 @@
                 <div class="blog-details-wrapper res-mrg-top">
                     <div class="single-blog-wrapper">
                         <div class="blog-img mb-30">
-                            <img src="{{url('public/frontend/images/03.jpg')}}" alt="">
+                            <img src="{{asset('public/backend/img/')}}/<?php echo $projects->img ?>" alt="">
                         </div>
                         <div class="blog-details-content">
                             <h2>{{ $projects->name }}</h2>
@@ -19,7 +19,7 @@
                             <div class="row justify-content-md-center">
                                 <div class="col-md-6 col-sm-6">
                                     <div class="dec-img">
-                                        <img src="{{url('public/frontend/images/03.jpg')}}" alt="">
+                                        <img src="{{asset('public/backend/img/')}}/<?php echo $projects->img2 ?>" alt="">
                                     </div>
                                 </div>
                             </div>

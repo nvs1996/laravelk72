@@ -16,10 +16,10 @@
                 <div class="col-lg-6 col-md-6">
                     <div class="blog-wrapper mb-30 gray-bg">
                         <div class="blog-img hover-effect">
-                            <a href="notification-detail/{{ $notification->id }}"><img alt="" src="{{url('public/frontend/images/nt-01.jpg')}}"></a>
+                            <a href="notification-detail/{{ $notification->id }}"><img alt="" src="{{asset('public/backend/img/')}}/<?php echo $notification->img ?>"></a>
                         </div>
                         <div class="blog-content">
-                            <h4 class="text-center"><a href="notification-detail/{{ $notification->id }}">{{ $notification->title }}</a></h4>
+                            <h4 class="text-center"><a href="notification-detail/{{ $notification->id }}">{{ $notification->content }}</a></h4>
                         </div>
                     </div>
                 </div>

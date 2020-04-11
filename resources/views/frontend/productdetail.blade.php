@@ -8,21 +8,14 @@
                         <div class="product-details-img">
                             <div class="owl-carousel">
                                 <div class="item">
-                                    <img src="{{url('public/frontend/images/item-7.jpg')}}"/>
+                                    <img src="{{asset('public/backend/img/')}}/<?php echo $product->img ?>"/>
                                 </div>
                                 <div class="item">
-                                    <img  src="{{url('public/frontend/images/img_bg_1.jpg')}}"/>
+                                    <img  src="{{asset('public/backend/img/')}}/<?php echo $product->img2 ?>"/>
                                 </div>
                                 <div class="item">
-                                    <img src="{{url('public/frontend/images/person2.jpg')}}"/>
+                                    <img src="{{asset('public/backend/img/')}}/<?php echo $product->img3 ?>"/>
                                 </div>
-                                <div class="item">
-                                    <img src="{{url('public/frontend/images/person1.jpg')}}"/>
-                                </div>
-                                <div class="item">
-                                    <img src="{{url('public/frontend/images/person3.jpg')}}"/>
-                                </div>
-                                
                             </div>
                             
                           

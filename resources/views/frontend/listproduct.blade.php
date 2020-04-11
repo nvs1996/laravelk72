@@ -13,12 +13,12 @@
                                 <div class="product-width col-lg-6 col-xl-4 col-md-6 col-sm-6">
                                     <div class="product-wrapper mb-10">
                                         <div class="product-img">
-                                            <a href="product/detail/14">
-                                                <img src="{{url('public/frontend/images/tintuc5.jpg')}}" alt="">
+                                            <a href="product/detail/{{ $product->id }}">
+                                                <img src="{{asset('public/backend/img/')}}/<?php echo $product->img ?>" alt="">
                                             </a>
                                         </div>
                                         <div class="product-content">
-                                            <h4><a href="product/detail/14">{{ $product->name }}</a></h4>
+                                            <h4><a href="product/detail/{{ $product->id }}">{{ $product->name }}</a></h4>
                                             <div class="product-price">
                                                 <span class="new">{{number_format( $product->price,0,'',',') }} đ</span>
                                             </div>
@@ -48,7 +48,7 @@
                                         @foreach ($category as $item)
                                             @if ($item->parent==$cate->id)
                                             <li>
-                                                <a href="#">{{ $item->name }}</a>
+                                                <a href="{{route('category.by.product', $item->id)}}">{{ $item->name }}</a>
                                             </li>
                                             @endif
                                         @endforeach

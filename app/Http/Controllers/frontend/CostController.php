@@ -11,7 +11,7 @@ class CostController extends Controller
     
     public function getCost()
     {
-        $costs = cost::orderBy("id", "DESC")->paginate(100);
+        $costs = cost::first();
         return view('frontend.cost', [
             "costs" => $costs,
         ]);
