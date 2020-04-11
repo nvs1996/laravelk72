@@ -17,7 +17,7 @@
                                             </a>
                                         </div>
                                         <div class="product-content">
-                                            <h4><a href="product/detail/{{ $product->id }}">{{ $product->name }}</a></h4>
+                                            <h4><a href="{{route('product-detail', $product->id)}}">{{ $product->name }}</a></h4>
                                             <div class="product-price">
                                                 <span class="new">{{number_format( $product->price,0,'',',') }} đ</span>
                                             </div>
