@@ -55,7 +55,7 @@
 							<img src="{{url('public/frontend/images/tintuc3.jpg')}}" alt="">
 						</div>
 						<div class="single-food-content">
-							<h3>Gạch 800x800</h3>
+							<h3>Gạch lát nền 800x800</h3>
 						</div>
 					</a>
 				</div>
@@ -67,7 +67,7 @@
 							<img src="{{url('public/frontend/images/tintuc3.jpg')}}" alt="">
 						</div>
 						<div class="single-food-content">
-							<h3>Gạch 600x600</h3>
+							<h3>Gạch lát nền 600x600</h3>
 						</div>
 					</a>
 				</div>
@@ -79,7 +79,7 @@
 							<img src="{{url('public/frontend/images/tintuc3.jpg')}}" alt="">
 						</div>
 						<div class="single-food-content">
-							<h3>Gạch 300x300</h3>
+							<h3>Gạch lát nền 300x300</h3>
 						</div>
 					</a>
 				</div>
@@ -98,24 +98,24 @@
 			</div>
 			<div class="col-lg-4 col-md-4">
 				<div class="single-food-category cate-padding-1 text-center mb-30">
-					<a href="product_by_category/12">
+					<a href="product_by_category/19">
 						<div class="single-food-hover-2">
 							<img src="{{url('public/frontend/images/tintuc3.jpg')}}" alt="">
 						</div>
 						<div class="single-food-content">
-							<h3>Gạch 600x600</h3>
+							<h3>Gạch ốp 400x800</h3>
 						</div>
 					</a>
 				</div>
 			</div>
 			<div class="col-lg-4 col-md-4">
 				<div class="single-food-category cate-padding-1 text-center mb-30">
-					<a href="product_by_category/17">
+					<a href="product_by_category/18">
 						<div class="single-food-hover-2">
 							<img src="{{url('public/frontend/images/tintuc3.jpg')}}" alt="">
 						</div>
 						<div class="single-food-content">
-							<h3>Gạch 300x300</h3>
+							<h3>Gạch ốp 300x600</h3>
 						</div>
 					</a>
 				</div>
