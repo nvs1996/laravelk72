@@ -16,7 +16,7 @@
                 <div class="blog-details-wrapper res-mrg-top">
                     <div class="single-blog-wrapper">
                         <div class="blog-img mb-30">
-                            <img src="{{asset('public/frontend/images/')}}/<?php echo $constructions->img ?>" alt="">
+                            <img src="{{asset('public/backend/img/')}}/<?php echo $constructions->img ?>" alt="">
                         </div>
                         <div class="blog-details-content">
                            
@@ -26,7 +26,7 @@
                             <div class="row justify-content-md-center">
                                 <div class="col-md-6 col-sm-6">
                                     <div class="dec-img">
-                                        <img src="{{asset('public/frontend/images/')}}/<?php echo $constructions->img ?>" alt="">
+                                        <img src="{{asset('public/backend/img/')}}/<?php echo $constructions->img ?>" alt="">
                                     </div>
                                 </div>
                             </div>

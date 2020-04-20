@@ -18,7 +18,7 @@
                             <div class="blog-wrapper mb-30 gray-bg">
                                 <div class="blog-img hover-effect">
                                     <a href="construction-detail/1">
-                                        <img alt="" src="{{asset('public/frontend/images/')}}/<?php echo $construction->img ?>">
+                                        <img alt="" src="{{asset('public/backend/img/')}}/<?php echo $construction->img ?>">
                                     </a>
                                 </div>
                                 <div class="blog-content">
