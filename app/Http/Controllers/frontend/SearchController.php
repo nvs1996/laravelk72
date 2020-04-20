@@ -37,6 +37,7 @@ class SearchController extends Controller
          
             $data['products']=product::where('img','<>','no-img.jpg')->paginate(12);
         }
+        $data['request'] = $request->all();
         $data['category']=category::all();
         $data['attribute']=attribute::all();
         return view('frontend.search',$data);

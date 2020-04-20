@@ -67,9 +67,9 @@ class ConstructionController extends Controller
         $constructions = construction::find($id);
         $constructions->name = $request->name;
         $constructions->detail = $request->detail;
-        if($request->hasFile('img'))
+        if($request->hasFile('product_img'))
         {
-            $file = $request->img;
+            $file = $request->product_img;
             $filename= str_random(9).'.'.$file->getClientOriginalExtension();
             $file->move('public/backend/img', $filename);
             $constructions->img=$filename;
@@ -79,7 +79,7 @@ class ConstructionController extends Controller
             $file = $request->product_img2;
             $filename= str_random(9).'.'.$file->getClientOriginalExtension();
             $file->move('public/backend/img', $filename);
-            $construction->img2 = $filename;
+            $constructions->img2 = $filename;
         }
         $constructions->save();
         return Redirect::route('construction.index')->with('thongbao','Đã sửa dự án thành công');

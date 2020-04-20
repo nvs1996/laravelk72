@@ -193,11 +193,6 @@ class ProductController extends Controller
         $product->price=$request->product_price;
         if($request->hasFile('product_img'))
         {
-            // if($product->img!='no-img.jpg')
-            // {
-            //     unlink('public/backend/img/'.$product->img);
-            // }
-
             $file = $request->product_img;
             $filename= str_random(9).'.'.$file->getClientOriginalExtension();
             $file->move('public/backend/img', $filename);

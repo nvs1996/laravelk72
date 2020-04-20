@@ -4,7 +4,7 @@
 <div class="pt-95">
     <div class="container">
         <div class="breadcrumb-content text-center">
-            <h3>Từ khóa: sản phẩm XYZ</h3>
+            <h3>Từ khóa: <?php echo $request['product']; ?></h3>
         </div>
     </div>
 </div>
@@ -15,39 +15,43 @@
                 <div class="grid-list-product-wrapper">
                     <div class="product-view product-grid">
                         <div class="row">
-                            @for ($i = 0; $i < 8; $i++)
+                            <!-- @foreach ($products as $product)
                                 <div class="product-width col-xl-3 col-lg-6 col-md-6 col-sm-12">
                                     <div class="product-wrapper mb-10">
                                         <div class="product-img">
-                                            <a href="product/detail/14">
-                                                <img src="{{url('public/frontend/images/tintuc5.jpg')}}" alt="">
+                                            <a href="product/detail/{{ $product->id }}">
+                                                <img src="{{asset('public/backend/img/')}}/<?php echo $product->img ?>" alt="">
                                             </a>
                                         </div>
                                         <div class="product-content">
-                                            <h4><a href="product/detail/14">PORCELAIN MEN KIM CƯƠNG SIÊU BÓNG KC89001</a></h4>
+                                            <h4><a href="product/detail/{{ $product->id }}">{{ $product->name }}</a></h4>
                                             <div class="product-price">
-                                                <span class="new">260,000 đ</span>
+                                                <span class="new">{{number_format( $product->price,0,'',',') }} đ</span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            @endfor
+                            @endforeach -->
+                            @foreach ($products as $product)
+                                <div class="product-width col-lg-6 col-xl-4 col-md-6 col-sm-6">
+                                    <div class="product-wrapper mb-10">
+                                        <div class="product-img">
+                                            <a href="product/detail/{{ $product->id }}">
+                                                <img src="{{asset('public/backend/img/')}}/<?php echo $product->img ?>" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="product-content">
+                                            <h4><a href="product/detail/{{ $product->id }}">{{ $product->name }}</a></h4>
+                                            <div class="product-price">
+                                                <span class="new">{{number_format( $product->price,0,'',',') }} đ</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
                         </div>
                         <div class="pagination-style text-center mt-10">
-                            <ul>
-                                <li>
-                                    <a href="#"><i class="icon-arrow-left"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#">1</a>
-                                </li>
-                                <li>
-                                    <a href="#">2</a>
-                                </li>
-                                <li>
-                                    <a class="active" href="#"><i class="icon-arrow-right"></i></a>
-                                </li>
-                            </ul>
+                            {{ $products->links() }}
                         </div>
                     </div>
                 </div>

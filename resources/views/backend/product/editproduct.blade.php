@@ -136,7 +136,7 @@ class="active"
                                             <div class="col-md-4">
                                                 <div class="form-group">
                                                     <label style="color: #30a5ff;">Ảnh 2 của sản phẩm</label>
-                                                    <input id="img2" type="file" name="product_img" class="form-control hidden"
+                                                    <input id="img2" type="file" name="product_img2" class="form-control hidden"
                                                         onchange="changeImg2(this)">
                                                     <img id="avatar2" class="thumbnail" width="100%" height="250px" src="public/backend/img/{{ $product->img2 }}">
                                                 </div>
@@ -144,7 +144,7 @@ class="active"
                                             <div class="col-md-4">
                                                 <div class="form-group">
                                                     <label style="color: #30a5ff;">Ảnh 3 của sản phẩm</label>
-                                                    <input id="img3" type="file" name="product_img" class="form-control hidden"
+                                                    <input id="img3" type="file" name="product_img3" class="form-control hidden"
                                                         onchange="changeImg3(this)">
                                                     <img id="avatar3" class="thumbnail" width="100%" height="250px" src="public/backend/img/{{ $product->img3 }}">
                                                 </div>

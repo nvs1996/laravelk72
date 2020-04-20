@@ -79,7 +79,7 @@ class ProjectController extends Controller
             $file = $request->product_img2;
             $filename= str_random(9).'.'.$file->getClientOriginalExtension();
             $file->move('public/backend/img', $filename);
-            $project->img2 = $filename;
+            $projects->img2 = $filename;
         }
         $projects->save();
         return Redirect::route('project.index')->with('thongbao','Đã sửa dự án thành công');

@@ -49,7 +49,7 @@ class="active"
                         <div class="form-group">
                             <label>Ảnh báo giá phụ</label>
                             <input id="img2" type="file" name="product_img2" class="form-control hidden"
-                                onchange="changeImg(this)">
+                                onchange="changeImg1(this)">
                             <img id="avatar2" class="thumbnail" width="100%" height="350px" src="public/backend/img/{{ $costs->img2 }}">
                     </div>
             </div>
@@ -83,7 +83,7 @@ class="active"
                 $('#img').click();
             });
         });
-        function changeImg(input) {
+        function changeImg1(input) {
             //Nếu như tồn thuộc tính file, đồng nghĩa người dùng đã chọn file mới
             if (input.files && input.files[0]) {
                 var reader = new FileReader();

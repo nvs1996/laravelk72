@@ -17,7 +17,7 @@
 					</div>
 					<div class="col-lg-6 col-md-6 col-12 col-sm-5">
 						<div class="slider-single-img slider-animated-1">
-							<img class="animated" src="{{url('public/frontend/images/LUYA11.jpg')}}" alt="">
+							<img class="animated" src="{{asset('public/backend/img/')}}/<?php echo $slides[0]->img ?>" alt="">
 						</div>
 					</div>
 				</div>
@@ -36,7 +36,7 @@
 					</div>
 					<div class="col-lg-6 col-md-6 col-sm-5 col-12">
 						<div class="slider-single-img slider-animated-1">
-							<img class="animated" src="{{url('public/frontend/images/LUYA11.jpg')}}" alt="">
+							<img class="animated" src="{{asset('public/backend/img/')}}/<?php echo $slides[1]->img ?>" alt="">
 						</div>
 					</div>
 				</div>
@@ -52,7 +52,7 @@
 				<div class="single-food-category cate-padding-1 text-center mb-30">
 					<a href="product_by_category/11">
 						<div class="single-food-hover-2">
-							<img src="{{url('public/frontend/images/tintuc3.jpg')}}" alt="">
+							<img src="{{url('public/frontend/images/800.jpg')}}" alt="">
 						</div>
 						<div class="single-food-content">
 							<h3>Gạch lát nền 800x800</h3>
@@ -64,7 +64,7 @@
 				<div class="single-food-category cate-padding-1 text-center mb-30">
 					<a href="product_by_category/12">
 						<div class="single-food-hover-2">
-							<img src="{{url('public/frontend/images/tintuc3.jpg')}}" alt="">
+							<img src="{{url('public/frontend/images/600.jpg')}}" alt="">
 						</div>
 						<div class="single-food-content">
 							<h3>Gạch lát nền 600x600</h3>
@@ -88,7 +88,7 @@
 				<div class="single-food-category cate-padding-1 text-center mb-30">
 					<a href="product_by_category/21">
 						<div class="single-food-hover-2">
-							<img src="{{url('public/frontend/images/tintuc3.jpg')}}" alt="">
+							<img src="{{url('public/frontend/images/gothanh.jpg')}}" alt="">
 						</div>
 						<div class="single-food-content">
 							<h3>Gạch gỗ thanh 180x800</h3>
@@ -100,7 +100,7 @@
 				<div class="single-food-category cate-padding-1 text-center mb-30">
 					<a href="product_by_category/19">
 						<div class="single-food-hover-2">
-							<img src="{{url('public/frontend/images/tintuc3.jpg')}}" alt="">
+							<img src="{{url('public/frontend/images/400800.jpg')}}" alt="">
 						</div>
 						<div class="single-food-content">
 							<h3>Gạch ốp 400x800</h3>
@@ -112,7 +112,7 @@
 				<div class="single-food-category cate-padding-1 text-center mb-30">
 					<a href="product_by_category/18">
 						<div class="single-food-hover-2">
-							<img src="{{url('public/frontend/images/tintuc3.jpg')}}" alt="">
+							<img src="{{url('public/frontend/images/300600.jpg')}}" alt="">
 						</div>
 						<div class="single-food-content">
 							<h3>Gạch ốp 300x600</h3>

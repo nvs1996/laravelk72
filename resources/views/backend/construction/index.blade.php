@@ -56,7 +56,7 @@ class="active"
 											<td>{{$construction->id}}</td>
 											<td>
 												<div class="row">
-												<div class="col-md-3"><img src="public/backend/img/{{$construction->img}}" alt="Áo đẹp" width="100px" class="thumbnail"></div>
+												<div class="col-md-3"><img src="public/backend/img/{{$construction->img}}" alt="None" width="100px" class="thumbnail"></div>
 												</div>
 											</td>
 											<td>

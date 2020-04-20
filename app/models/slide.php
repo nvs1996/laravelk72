@@ -8,7 +8,7 @@ class slide extends Model
 {
     protected $table='slides';
     protected $fillable = [
-        'name',  'img'
+        'name',  'img', 'state'
     ];
     public $timestamps =false;
 }

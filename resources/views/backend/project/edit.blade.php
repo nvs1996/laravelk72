@@ -52,7 +52,7 @@ class="active"
                     <div class="form-group">
                         <label>Ảnh phụ của dự án</label>
                         <input id="img1" type="file" name="product_img2" class="form-control hidden"
-                            onchange="changeImg(this)">
+                            onchange="changeImg1(this)">
                         <img id="avatar1" class="thumbnail" width="60%" height="200px" src="public/backend/img/{{ $projects->img2 }}">
                     </div>
                 </div>

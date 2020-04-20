@@ -31,7 +31,6 @@ class="active"
         @csrf
             <div class="row">
                 <div class="col-md-6">
-                    
                    <div class="form-group">
                         <label>Ảnh chính của dự án</label>
                         @if ($errors->has('product_img'))
@@ -42,6 +41,13 @@ class="active"
                         <input id="img" type="file" name="product_img" class="form-control hidden"
                             onchange="changeImg(this)">
                         <img id="avatar" class="thumbnail" width="60%" height="100%" src="public/backend/img/import-img.png">
+                    </div>
+                    <div class="form-group">
+                        <label style="color: #30a5ff;">Trạng thái</label>
+                        <select  name="state" class="form-control">
+                            <option value="1">Hiển thị</option>
+                            <option value="0">Không hiển thị</option>
+                        </select>
                     </div>
                 </div>
                     

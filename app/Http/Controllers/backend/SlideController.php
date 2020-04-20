@@ -12,7 +12,7 @@ class SlideController extends Controller
 {
     public function index(Request $request)
     {
-        $slides = slide::orderBy("id","DESC")->paginate(3);
+        $slides = slide::orderBy("id","DESC")->paginate(4);
         return view('backend.slide.index', [
             "slides" => $slides,
         ]);
@@ -38,6 +38,7 @@ class SlideController extends Controller
         {
             $slide->img='no-img.jpg';
         }
+        $slide->state = $request->state;
         $slide->save();
         return Redirect::route('slide.index')->with(["thongbao"=>"Tạo sldie thành công!"]);
     }
@@ -58,6 +59,7 @@ class SlideController extends Controller
             $file->move('public/backend/img', $filename);
             $slides->img=$filename;
         }
+        $slides->state = $request->state;
         $slides->save();
         return Redirect::route('slide.index')->with('thongbao','Đã sửa slide thành công');
     }

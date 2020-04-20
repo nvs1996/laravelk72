@@ -37,12 +37,13 @@ class="active"
 									</div>
 								@endif
 								<a href="{{ route('slide.create') }}" class="btn btn-success">Thêm slide</a>
-								<h5>Slide bên ngoài trang bán hàng sẽ hiển thị ra 3 slide gần nhất!!! </h5>
+								<h5>Slide bên ngoài trang bán hàng sẽ hiển thị ra 2 slide có trạng thái là "Hiển thị". </h5>
 								<table class="table table-bordered" style="margin-top:20px;">
 									<thead>
 										<tr class="bg-primary">
 											<th style="width: 10%;">ID</th>
-											<th style="width: 20%;">Thông tin slide</th>
+											<th style="width: 40%;">Thông tin slide</th>
+											<th style="width: 30%;">Trạng thái</th>
 											<th width='16%'>Tùy chọn</th>
 										</tr>
 									</thead>
@@ -57,6 +58,14 @@ class="active"
 												<div class="row">
 												<div class="col-md-3"><img src="public/backend/img/{{$slide->img}}" alt="" width="100px" class="thumbnail"></div>
 												</div>
+											</td>
+											<td>
+												@if ($slide->state==1)
+												<a name="" id="" class="btn btn-success" href="#" role="button">Hiển thị</a>
+												@else
+												<a name="" id="" class="btn btn-danger" href="#" role="button">Không hiển thị</a>
+												@endif
+											
 											</td>
 											<td>
 												<div class="input-group-btn dropdown">

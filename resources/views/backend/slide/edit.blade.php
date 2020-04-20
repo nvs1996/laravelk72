@@ -37,6 +37,13 @@ class="active"
                             onchange="changeImg1(this)">
                         <img id="avatar1" class="thumbnail" width="100%" height="100%" src="public/backend/img/{{ $slides->img }}">
                     </div>
+                    <div class="form-group">
+                        <label style="color: #30a5ff;">Trạng thái</label>
+                        <select  name="state" class="form-control">
+                            <option value="1">Hiển thị</option>
+                            <option value="0">Không hiển thị</option>
+                        </select>
+                    </div>
                 </div>
             </div>
             <!-- /.row -->

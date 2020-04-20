@@ -30,16 +30,49 @@ class="active"
 		<!--/.row-->
 		<div class="row">
 		@foreach ($costs as $cost)
-	        <div style="text-align: center; margin-bottom: 50px;">
+			<div class="shop-area pt-50 pb-100 blog-project">
+			    <div class="container">
+			        <div class="row flex-row-reverse">
+			            <div class="col-lg-12 col-md-12">
+			                <div class="blog-details-wrapper res-mrg-top">
+			                    <div class="single-blog-wrapper">
+			                        <div class="blog-img mb-30">
+			                            <img <img src="public/backend/img/{{$cost->img}}">
+			                        </div>
+			                        <div class="blog-details-content">
+			                           
+			                        </div>
+			                        <p> {{ $cost->detail }}</p>
+			                        <div class="dec-img-wrapper">
+			                            <div class="row justify-content-md-center">
+			                                <div class="col-md-6 col-sm-6">
+			                                    <div class="dec-img">
+			                                        <img src="{{asset('public/frontend/images/')}}/<?php echo $cost->img ?>" alt="">
+			                                    </div>
+			                                </div>
+			                            </div>
+			                        </div>
+			                        <p> {{ $cost->detail2 }}</p>
+			                    </div>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+			<div>
+                <a href="{{ route('cost.edit', $cost->id) }}" class="btn btn-default form-control" onclick="$(this).closest('form').submit();"><i class="fa fa-pencil"></i> Cập nhật</a>
+        	</div>
+	        <!-- <div>
 	        	<h3>Nội dung báo giá</h3>
 	        	<p>{{ $cost->detail}}</p>
-	        	<div style="margin-left: auto; margin-right: auto; margin-top: 40px;">
+	        	<div class="blog-img mb-30">
 	        		<img src="public/backend/img/{{$cost->img}}">
 	        	</div>
 	        	<div>
                     <a href="{{ route('cost.edit', $cost->id) }}" class="btn btn-default form-control" onclick="$(this).closest('form').submit();"><i class="fa fa-pencil"></i> Cập nhật</a>
-	        </div>
+	        	</div>
+       		</div> -->
     	@endforeach
-        </div>
+   		</div>
 			<!--end main-->
 @endsection

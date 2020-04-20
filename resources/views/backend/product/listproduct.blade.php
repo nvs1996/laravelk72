@@ -58,7 +58,7 @@
 										<td>{{$product->id}}</td>
 											<td>
 												<div class="row">
-												<div class="col-md-3"><img src="public/backend/img/{{$product->img}}" alt="Áo đẹp" width="100px" class="thumbnail"></div>
+												<div class="col-md-3"><img src="public/backend/img/{{$product->img}}" alt="None" width="100px" class="thumbnail"></div>
 													<div class="col-md-9">
 													<p><strong>Mã sản phẩm : {{$product->product_code}}</strong></p>
 														<p>Tên sản phẩm :{{$product->name}}</p>

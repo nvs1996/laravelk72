@@ -80,12 +80,14 @@
                                         <i class="ti-close s-close"></i>
                                     </button>
                                     <div class="search-content">
-                                        <form action="{{ route('search.product') }}">
-                                            <input type="text" placeholder="Search">
+                                        {!! Form::open(['method' => 'GET', 'route' => ['search.product']]) !!}
+                                        <!-- <form action="{{ route('search.product') }}"> -->
+                                            <input type="text" name="product" placeholder="Search">
                                             <button>
                                                 <i class="icon-magnifier"></i>
                                             </button>
-                                        </form>
+                                        <!-- </form> -->
+                                        {!! Form::close() !!}
                                     </div>
                                 </div>
                             </div>
