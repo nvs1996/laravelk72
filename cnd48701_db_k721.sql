@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Mar 18, 2020 at 11:03 PM
+-- Generation Time: Apr 22, 2020 at 09:55 PM
 -- Server version: 10.3.21-MariaDB
 -- PHP Version: 7.3.13
 
@@ -232,20 +232,23 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 CREATE TABLE `notifications` (
   `id` int(10) UNSIGNED NOT NULL,
   `title` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
-  `content` varchar(250) COLLATE utf8_unicode_ci NOT NULL
+  `content` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
+  `img` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
+  `img2` varchar(500) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `content2` varchar(500) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `notifications`
 --
 
-INSERT INTO `notifications` (`id`, `title`, `content`) VALUES
-(3, 'asasa', 'asasas'),
-(4, 'Tin tức mới nhất của CND', '111'),
-(5, 'Hướng dẫn cách chọn mẫu gạch cho ngôi nhà của bạn', '111'),
-(6, 'Gạch 80*80 đang có những sản phẩm cực hot', '111'),
-(7, 'Bộ sưu tập 2020 mới được CND cập nhật', '111'),
-(8, 'Tin tức mới nhất của CND', '111');
+INSERT INTO `notifications` (`id`, `title`, `content`, `img`, `img2`, `content2`) VALUES
+(3, 'asasa', 'asasas', '', NULL, NULL),
+(4, 'Tin tức mới nhất của CND', '111', '', NULL, NULL),
+(5, 'Hướng dẫn cách chọn mẫu gạch cho ngôi nhà của bạn', '111', '', NULL, NULL),
+(6, 'Gạch 80*80 đang có những sản phẩm cực hot', '111', '', NULL, NULL),
+(7, 'Bộ sưu tập 2020 mới được CND cập nhật', '111', '', NULL, NULL),
+(8, 'Tin tức mới nhất của CND', '111', '', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -319,7 +322,16 @@ INSERT INTO `product` (`id`, `product_code`, `name`, `price`, `state`, `info`, `
 (14, 'KC89001', 'PORCELAIN MEN KIM CƯƠNG SIÊU BÓNG KC89001', '260000', 1, 'PORCELAIN MEN KIM CƯƠNG SIÊU BÓNG KC89001\r\n\r\nKích thước: 800x800mm\r\n\r\nChất liệu: Porcelain, phẳng\r\n\r\nCông nghệ: Kim cương NANO siêu bóng\r\nMàu: Xám tro - vân đá rễ cây\r\nBề mặt : Bề mặt: phẳng - siêu bóng, được phủ lớp men Kim Cương siêu cứng giúp chống trầy xước tốt\r\nĐộ bóng đạt 99%, Bóng nhưng không trơn - trượt', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'V47HJ6Crm.jpg', NULL, NULL, 11, '2020-03-11 05:30:11', '2020-03-11 07:05:47'),
 (15, 'LX6639', 'PORCELAIN MÀI BÓNG NANO LX6639', '180000', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'LZ0XlxAAV.jpg', NULL, NULL, 12, '2020-03-11 05:35:43', '2020-03-11 05:36:04'),
 (24, 'W158001', 'Gạch ốp lát gỗ thanh cao cấp W158001', '200000', 1, 'Thương hiệu: CMC', 'Tên sản phẩm: Gạch ốp lát gỗ thanh cao cấp', 'Mã sản phẩm: W158001', 'Kích thước: 150x800mm', 'Chất liệu: Ceramic', NULL, NULL, NULL, 'bMwSoxRrI.jpg', 'Mm7ehUgox.jpg', 'cqKQih4ep.jpg', 21, '2020-03-15 09:35:06', '2020-03-18 07:26:26'),
-(31, 'A311', 'test', '11109', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2HYPKoYIm.jpg', 'ghRbUTMVX.jpg', 'E2sWXe3lF.jpg', 10, '2020-03-18 08:54:11', '2020-03-18 08:54:11');
+(31, 'LX8825', 'GẠCH PORCELAIN MÀI NANO SIÊU BÓNG LX8825', '230000', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'N2DrJB55X.jpg', 'ghRbUTMVX.jpg', 'E2sWXe3lF.jpg', 11, '2020-03-18 08:54:11', '2020-03-20 20:57:06'),
+(33, 'LX8814', 'PORCELAIN MÀI NANO SIÊU BÓNG LX8814', '220000', 1, 'Thương hiệu: CMC', 'Tên sản phẩm: Gạch Porcelain mài nano siêu bóng', 'Mã sản phẩm: LX8814', 'Chất liệu: Porcelain xương bán sứ - độ cứng cao', NULL, NULL, NULL, NULL, 'TU6P2HXG4.jpg', 'EVNC8E7lb.jpg', 'xErwK08r9.jpg', 11, '2020-03-20 20:59:42', '2020-03-20 21:03:00'),
+(34, 'LX8820', 'PORCELAIN MÀI NANO SIÊU BÓNG LX8820', '220000', 1, 'Thương hiệu: CMC', 'Tên sản phẩm: Gạch porcelain mài nano siêu bóng', 'Mã sản phẩm: LX8820', 'Chất liệu: Porcelain xương bán sứ - độ cứng cao', 'Bề mặt: Phẳng - bóng', NULL, NULL, NULL, 'J8LAQeCmm.jpg', 'jORZLNZ9E.jpg', 'mtMZk1bcW.jpg', 11, '2020-03-20 21:05:40', '2020-03-20 21:05:40'),
+(35, 'LX8821', 'PORCELAIN MÀI NANO SIÊU BÓNG LX8821', '220000', 1, 'Thương hiệu: CMC', 'Tên sản phẩm: Gạch porcelain mài nano siêu bóng', 'Mã sản phẩm: LX8820', 'Chất liệu: Porcelain xương bán sứ - độ cứng cao', 'Bề mặt: Phẳng - bóng', NULL, NULL, NULL, 'q35LOxZUA.jpg', '4uN1dWm5n.jpg', 'no-img.jpg', 11, '2020-03-20 21:07:21', '2020-03-20 21:07:21'),
+(36, 'LX8822', 'GẠCH LÁT MÀI NANO SIÊU BÓNG LX8822', '220000', 1, 'Thương hiệu: CMC', 'Tên sản phẩm: Gạch porcelain mài nano siêu bóng', 'Mã sản phẩm: LX8822', 'Chất liệu: Porcelain xương bán sứ - độ cứng cao', 'Bề mặt: Phẳng - bóng', NULL, NULL, NULL, 'wNyDY3ymp.jpg', 'DsphKz8QO.jpg', 'srqhIcDKd.jpg', 10, '2020-03-20 21:11:30', '2020-03-20 21:11:30'),
+(37, 'LX8823', 'GẠCH LÁT MÀI NANO SIÊU BÓNG LX8823', '220000', 1, 'Thương hiệu: CMC', 'Tên sản phẩm: Gạch porcelain mài nano siêu bóng', 'Mã sản phẩm: LX8823', 'Chất liệu: Porcelain xương bán sứ - độ cứng cao', 'Bề mặt: Phẳng - bóng', NULL, NULL, NULL, 'AyFWLG841.jpg', 'nFR0Rhe7A.jpg', 'ohovFQqeG.jpg', 11, '2020-03-20 21:13:24', '2020-03-20 21:13:24'),
+(38, 'LX8824', 'GẠCH LÁT MÀI NANO SIÊU BÓNG LX8824', '220000', 1, 'Thương hiệu: CMC', 'Tên sản phẩm: Gạch lát mài nano siêu bóng', 'Mã sản phẩm: LX8824', 'Chất liệu: Porcelain xương bán sứ - độ cứng cao', 'Bề mặt: Phẳng - bóng', NULL, NULL, NULL, '2pbkNYZB6.jpg', 'Q2nJdH01U.jpg', 'CLsFUTcLb.jpg', 11, '2020-03-20 21:15:24', '2020-03-20 21:15:24'),
+(39, 'GX6801', 'GẠCH LÁT NỀN MEN MATT GX6801', '165000', 1, 'Thương hiệu: CMC', 'Tên sản phẩm: Gạch lát nền men matt', 'Mã sản phẩm: GX6801', 'Chất liệu: Porcelain xương bán sứ - độ cứng cao', 'Bề mặt: Phẳng - nhám', NULL, NULL, NULL, 'ruw8MsJe6.jpg', 'KkQt4sOCm.jpg', 'IfGe1tKQU.jpg', 12, '2020-03-20 21:20:07', '2020-03-20 21:20:07'),
+(40, 'LD36102', 'GẠCH ỐP CERAMIC MEN BÓNG LD36102', '135000', 1, 'Thương hiệu: CMC', 'Tên sản phẩm: Gạch ốp ceramic men bóng', 'Mã sản phẩm: LD36102', 'Chất liệu: Ceramic', NULL, NULL, NULL, NULL, 'izrjuDTT2.jpg', 'bId2NxNmR.jpg', 'n7k9yW1pQ.jpg', 18, '2020-03-20 21:26:07', '2020-03-20 21:26:07'),
+(41, 'VN3302', 'GẠCH LÁT NỀN MEN SUGAR VN3302', '130000', 1, 'Thương hiệu: CMC', 'Tên sản phẩm: Gạch lát nền men sugar', 'Mã sản phẩm: VN3302', 'Chất liệu: Ceramic', 'Bề mặt: Phẳng - nhám', NULL, NULL, NULL, 'bCwmfOPz3.jpg', 'F1V2tVi88.jpg', 'wWv76MWbA.jpg', 17, '2020-03-20 21:31:40', '2020-03-20 21:31:40');
 
 -- --------------------------------------------------------
 
@@ -358,17 +370,18 @@ INSERT INTO `projects` (`id`, `name`, `detail`, `img`, `img2`, `detail2`) VALUES
 
 CREATE TABLE `slides` (
   `id` int(10) UNSIGNED NOT NULL,
-  `img` varchar(500) NOT NULL
+  `img` varchar(500) NOT NULL,
+  `state` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `slides`
 --
 
-INSERT INTO `slides` (`id`, `img`) VALUES
-(1, 'PVgoKorpl.jpg'),
-(2, 'Q4fJeHQCA.jpg'),
-(3, 'iJUxjclDR.jpg');
+INSERT INTO `slides` (`id`, `img`, `state`) VALUES
+(1, '7t1gl6Xk1.jpg', 0),
+(2, 'f1hiHjeji.jpg', 1),
+(3, 'jW9oAHJP6.jpg', 1);
 
 -- --------------------------------------------------------
 
@@ -416,7 +429,9 @@ INSERT INTO `values` (`id`, `value`, `attr_id`) VALUES
 (10, '800x800', 1),
 (11, 'CMC', 3),
 (12, '600x600', 1),
-(13, '150x800', 1);
+(13, '150x800', 1),
+(15, '300x600', 1),
+(16, '300x300', 1);
 
 -- --------------------------------------------------------
 
@@ -440,7 +455,26 @@ INSERT INTO `values_product` (`values_id`, `product_id`) VALUES
 (11, 15),
 (13, 24),
 (11, 24),
-(10, 31);
+(10, 31),
+(11, 31),
+(10, 33),
+(11, 33),
+(10, 34),
+(11, 34),
+(10, 35),
+(11, 35),
+(10, 36),
+(11, 36),
+(10, 37),
+(11, 37),
+(10, 38),
+(11, 38),
+(12, 39),
+(11, 39),
+(15, 40),
+(11, 40),
+(16, 41),
+(11, 41);
 
 -- --------------------------------------------------------
 
@@ -463,7 +497,16 @@ INSERT INTO `variant` (`id`, `price`, `product_id`) VALUES
 (18, '180000', 15),
 (25, '0', 24),
 (26, '0', 24),
-(28, '0', 31);
+(28, '0', 31),
+(30, '0', 33),
+(31, '0', 34),
+(32, '0', 35),
+(33, '0', 36),
+(34, '0', 37),
+(35, '0', 38),
+(36, '0', 39),
+(37, '0', 40),
+(38, '0', 41);
 
 -- --------------------------------------------------------
 
@@ -487,7 +530,25 @@ INSERT INTO `variant_values` (`variant_id`, `values_id`) VALUES
 (18, 11),
 (25, 10),
 (26, 13),
-(28, 10);
+(28, 10),
+(30, 10),
+(30, 11),
+(31, 10),
+(31, 11),
+(32, 10),
+(32, 11),
+(33, 10),
+(33, 11),
+(34, 10),
+(34, 11),
+(35, 10),
+(35, 11),
+(36, 12),
+(36, 11),
+(37, 15),
+(37, 11),
+(38, 16),
+(38, 11);
 
 --
 -- Indexes for dumped tables
@@ -717,7 +778,7 @@ ALTER TABLE `poster`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT for table `projects`
@@ -741,13 +802,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `values`
 --
 ALTER TABLE `values`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `variant`
 --
 ALTER TABLE `variant`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- Constraints for dumped tables

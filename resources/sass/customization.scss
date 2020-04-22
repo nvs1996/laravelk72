@@ -199,9 +199,56 @@
         img{
             width: 100%;
             height: 100%;
-            object-fit: cover;
-            object-position: center;
         }
     }
 }
 // construction 
+.single-food-hover-2{
+    height: 210px;
+    > img{
+        height: 100%;
+    }
+}
+.product-img{
+    height: 180px;
+    img{
+        height: 100%;
+    }
+}
+.blog-img{
+    height: 310px;
+    img{
+        height: 100%;
+    }
+}
+.dec-img{
+    height: 453px;
+    >img{
+        height: 100%;
+    }
+}
+// pagination
+.pagination-style{
+    .page-item{
+        .page-link{
+            background-color: transparent;
+            border: 1px solid #7e4c4f;
+            color: #7e4c4f;
+            display: inline-block;
+            font-size: 13px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            width: 40px;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
+        &.active{
+            span.page-link{
+                background-color: #7e4c4f;
+                color: #ffffff;
+            }
+        }
+    }
+}

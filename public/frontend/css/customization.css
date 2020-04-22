@@ -181,9 +181,57 @@
 .blog-project .blog-img img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+}
+
+.single-food-hover-2 {
+  height: 210px;
+}
+
+.single-food-hover-2 > img {
+  height: 100%;
+}
+
+.product-img {
+  height: 180px;
+}
+
+.product-img img {
+  height: 100%;
+}
+
+.blog-img {
+  height: 310px;
+}
+
+.blog-img img {
+  height: 100%;
+}
+
+.dec-img {
+  height: 453px;
+}
+
+.dec-img > img {
+  height: 100%;
+}
+
+.pagination-style .page-item .page-link {
+  background-color: transparent;
+  border: 1px solid #7e4c4f;
+  color: #7e4c4f;
+  display: inline-block;
+  font-size: 13px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  width: 40px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.pagination-style .page-item.active span.page-link {
+  background-color: #7e4c4f;
+  color: #ffffff;
 }
 
