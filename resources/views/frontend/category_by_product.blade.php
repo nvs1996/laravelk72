@@ -12,8 +12,8 @@
                                 <div class="product-width col-lg-6 col-xl-4 col-md-6 col-sm-6">
                                     <div class="product-wrapper mb-10">
                                         <div class="product-img">
-                                            <a href="product/detail/14">
-                                                <img src="{{asset('public/backend/img/')}}/<?php echo $product->img ?>" alt="">
+                                            <a href="{{route('product-detail', $product->id)}}">
+                                                <img class="zoom-product" src="{{asset('public/backend/img/')}}/<?php echo $product->img ?>" alt="">
                                             </a>
                                         </div>
                                         <div class="product-content">

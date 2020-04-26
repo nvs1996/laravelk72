@@ -37,8 +37,18 @@
 }
 // menu
 .main-menu {
+    nav{
+        >ul{
+            >li{
+                >ul.submenu{
+                    width: 365px;
+                }
+            }
+        }
+    }
     li {
         a{
+            font-weight: 500;
             font-size: 16px;
             &.main-menu-1{
                 padding-top: 40px;
@@ -80,7 +90,7 @@
     .single-food-content > h3{
         padding: 15px 30px;
         font-family: Arial, Helvetica, sans-serif;
-        font-size: 25px;
+        font-size: 20px;
     }   
 }
 .footer-widget{
@@ -249,6 +259,50 @@
                 background-color: #7e4c4f;
                 color: #ffffff;
             }
+        }
+    }
+}
+// search
+.custom-search-content{
+    position: relative;
+    padding-top: 30px;
+    input{
+        border-radius: 50px;
+        padding-right: 40px;
+    }
+    button{
+        border: none;
+        font-size: 18px;
+        position: absolute;
+        right: 5px;
+        bottom: 6px;
+        background: none;
+    }
+}
+// phone 
+.phone-contact{
+    text-align: right;
+    .icon-phone{
+        position: relative;
+        font-size: 18px;
+        font-weight: 500;
+        &::before{
+            position: absolute;
+            top: 0px;
+            left: -25px;
+        }
+    }
+}
+@media only screen and (max-width:992px){
+    .custom-search-content{
+        position: absolute;
+        top: 25px;
+        padding: 0;
+        right: 55px;
+        display: flex;
+        align-items: center;
+        .phone-contact{
+            margin-right: 10px;
         }
     }
 }

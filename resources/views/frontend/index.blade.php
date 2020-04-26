@@ -135,7 +135,7 @@
 					<div class="product-img">
 						<a href="product/detail/{{ $product->id }}">
 							<!-- <img src="{{url('public/frontend/images/LZ0XlxAAV.jpg')}}" alt=""> -->
-							<img src="{{asset('public/backend/img/')}}/<?php echo $product->img ?>" alt="">
+							<img class="zoom-product" src="{{asset('public/backend/img/')}}/<?php echo $product->img ?>"  alt="zoom"  alt="">
 						</a>
 					</div>
 					<div class="product-content">

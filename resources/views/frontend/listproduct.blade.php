@@ -14,7 +14,7 @@
                                     <div class="product-wrapper mb-10">
                                         <div class="product-img">
                                             <a href="product/detail/{{ $product->id }}">
-                                                <img src="{{asset('public/backend/img/')}}/<?php echo $product->img ?>" alt="">
+                                                <img class="zoom-product" src="{{asset('public/backend/img/')}}/<?php echo $product->img ?>" alt="">
                                             </a>
                                         </div>
                                         <div class="product-content">

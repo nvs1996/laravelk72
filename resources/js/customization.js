@@ -19,3 +19,12 @@ $( document ).ready(function() {
     })
 });
   
+$(".zoom-product").elevateZoom({
+    gallery : "gallery",
+    galleryActiveClass: "active",
+    zoomWindowWidth:300,
+    zoomWindowHeight:100,
+    scrollZoom : false,
+    zoomType : "inner",
+    cursor: "crosshair"
+});  

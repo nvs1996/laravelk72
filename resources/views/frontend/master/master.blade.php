@@ -25,17 +25,18 @@
     </head>
     <body>
         <header class="header-area">
+            
             <div class="header-bottom transparent-bar">
                 <div class="container">
                     <div class="row">
-                        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-5">
+                        <div class="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-5">
                             <div class="logo" >
                                 <!--{{url('public/frontend/images/logo.jpg')}}-->
                                 <a href="{{route('index.frontend')}}"><img alt="" src="{{url('public/frontend/images/logo.jpg')}}"></a>
                             </div>
                         </div>
                         <!--MENU-->
-                        <div class="col-xl-9 col-lg-8 d-none d-lg-block">
+                        <div class="col-xl-8 col-lg-8 d-none d-lg-block">
                             <div class="main-menu text-center">
                                 <nav>
                                     <ul>
@@ -72,24 +73,20 @@
                                 </nav>
                             </div>
                         </div>
-                        <div class="col-xl-1 col-lg-1 col-md-8 col-sm-8 col-7">
-                            <div class="search-login-cart-wrapper">
-                                <div class="header-search same-style">
-                                    <button class="search-toggle">
-                                        <i class="icon-magnifier s-open"></i>
-                                        <i class="ti-close s-close"></i>
-                                    </button>
-                                    <div class="search-content">
-                                        {!! Form::open(['method' => 'GET', 'route' => ['search.product']]) !!}
-                                        <!-- <form action="{{ route('search.product') }}"> -->
-                                            <input type="text" name="product" placeholder="Search">
-                                            <button>
-                                                <i class="icon-magnifier"></i>
-                                            </button>
-                                        <!-- </form> -->
-                                        {!! Form::close() !!}
-                                    </div>
+                        <div class="col-xl-2 col-lg-2 col-md-8 col-sm-8 col-7">
+                            
+                            <div class="search-content custom-search-content">
+                                <div class="phone-contact">
+                                    <span class="icon-phone">0947211268</span>
                                 </div>
+                                {!! Form::open(['method' => 'GET', 'route' => ['search.product']]) !!}
+                                <!-- <form action="{{ route('search.product') }}"> -->
+                                    <input type="text" name="product" placeholder="Search">
+                                    <button>
+                                        <i class="icon-magnifier"></i>
+                                    </button>
+                                <!-- </form> -->
+                                {!! Form::close() !!}
                             </div>
                         </div>
                         <div class="mobile-menu-area electro-menu d-md-block col-md-12 col-lg-12 col-12 d-lg-none d-xl-none">
