@@ -74,12 +74,12 @@
 			</div>
 			<div class="col-lg-4 col-md-4">
 				<div class="single-food-category cate-padding-1 text-center mb-30">
-					<a href="product_by_category/17">
+					<a href="product_by_category/15">
 						<div class="single-food-hover-2">
 							<img src="{{url('public/frontend/images/tintuc3.jpg')}}" alt="">
 						</div>
 						<div class="single-food-content">
-							<h3>Gạch lát nền 300x300</h3>
+							<h3>Gạch lát nền 500x500</h3>
 						</div>
 					</a>
 				</div>

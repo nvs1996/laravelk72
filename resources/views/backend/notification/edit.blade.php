@@ -56,7 +56,7 @@ class="active"
                     </div>
                     <div class="form-group">
                         <label>Ảnh phụ của tin tức</label>
-                        <input id="img2" type="file" name="product_img2" class="form-control hidden"
+                        <input id="img1" type="file" name="product_img2" class="form-control hidden"
                             onchange="changeImg1(this)">
                         <img id="avatar1" class="thumbnail" width="60%" height="200px" src="public/backend/img/{{ $notifications->img2 }}">
                     </div>
