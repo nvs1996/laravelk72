@@ -40,7 +40,7 @@ class="active"
                         <textarea name="detail" value="{{ $projects->detail }}" type="text" class="form-control" placeholder="Nhập vào nội dung" required><?php echo ( $projects->detail ); ?></textarea>
                     </div>
                     <div class="form-group">
-                        <label>Ảnh sản phẩm</label>
+                        <label>Ảnh chính dự án</label>
                         <input id="img" type="file" name="product_img" class="form-control hidden"
                             onchange="changeImg(this)">
                         <img id="avatar" class="thumbnail" width="60%" height="200px" src="public/backend/img/{{ $projects->img }}">

@@ -27,7 +27,7 @@ class="active"
         </div>
         <!-- /.box-header -->
         <div class="box-body">
-        {!! Form::open(['method' => 'POST', 'class' => 'validate', 'route' => ['notification.update', $notifications->id], 'class' => 'validate']) !!}
+        {!! Form::open(['method' => 'POST', 'class' => 'validate', 'route' => ['notification.update', $notifications->id], 'class' => 'validate', 'enctype' => 'multipart/form-data']) !!}
             <div class="row">
                 <div class="col-md-6">
                     <!-- /.form-group -->
@@ -41,11 +41,6 @@ class="active"
                     </div>
                    <div class="form-group">
                         <label>Ảnh chính của tin tức</label>
-                        @if ($errors->has('product_img'))
-                            <div class="alert alert-danger" role="alert">
-                                <strong>{{$errors->first('product_img')}}</strong>
-                            </div>
-                        @endif
                         <input id="img" type="file" name="product_img" class="form-control hidden"
                             onchange="changeImg(this)">
                         <img id="avatar" class="thumbnail" width="60%" height="200px" src="public/backend/img/{{ $notifications->img }}">
@@ -65,7 +60,7 @@ class="active"
             </div>
             <!-- /.row -->
         </div>
-        <div class="box-footer">
+        <div class="box-footer" style="margin-bottom: 50px;">
             <a href=" {{ route('notification.index') }}" class="btn btn-warning" style="margin-left: 15px;">Hủy</a>
             {!! Form::button('Cập nhật', ['class' => 'btn btn-success pull-left', 'type' => "submit"]) !!}
         </div>

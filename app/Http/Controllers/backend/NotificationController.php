@@ -70,7 +70,7 @@ class NotificationController extends Controller
         $notification->content2 = $request->content2;
         if($request->hasFile('product_img'))
         {
-            $file = $request->img;
+            $file = $request->product_img;
             $filename= str_random(9).'.'.$file->getClientOriginalExtension();
             $file->move('public/backend/img', $filename);
             $notification->img=$filename;
