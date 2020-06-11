@@ -25,7 +25,7 @@ class indexController extends Controller
         $data['notifications'] = notification::orderby('id','ASC')->take(5)->get();
         $data['slides'] = slide::orderby('id','ASC')->where('state', 1)->take(2)->get();
         $data['product_80s'] = product::where("category_id", "11")->orderBy('price', 'ASC')->take(4)->get();
-        $data['product_60s'] = product::where("category_id", "12"->orderBy('price', 'ASC')->take(4)->get();
+        $data['product_60s'] = product::where("category_id", "12")->orderBy('price', 'ASC')->take(4)->get();
         $data['product_30s_gach_nen'] = product::where("category_id", "17")->orderBy('price', 'ASC')->take(4)->get();
         $data['product_30s_gach_op'] = product::where("category_id", "18")->orderBy('price', 'ASC')->take(4)->get();
         $data['product_go_thanh'] = product::where("category_id", "21")->orderBy('price', 'ASC')->take(4)->get();
