@@ -61,32 +61,32 @@
                     <!--Filter-->
                     <div class="shop-widget mt-50">
                         <h4 class="shop-sidebar-title">KHOẢNG GIÁ</h4>
-                            <div class="price_filter mt-25">
-                                <div class="form-group">
-                                    <label for="inputState">Từ</label>
-                                    <select id="inputState" class="form-control">
-                                        <option selected>100.000 đ</option>
-                                        <option>100.000 đ</option>
-                                        <option>100.000 đ</option>
-                                        <option>100.000 đ</option>
-                                        <option>100.000 đ</option>
-                                    </select>
+                            <form method="POST" action="{{ route('search.product') }}">
+                                @csrf
+                                <div class="price_filter mt-25">
+                                    <div class="form-group">
+                                        <label for="inputState">Từ</label>
+                                        <select id="inputState" class="form-control" name="start">
+                                            <option value="100000">100.000 đ</option>
+                                            <option value="200000">200.000 đ</option>
+                                            <option value="500000">500.000 đ</option>
+                                            <option value="800000">800.000 đ</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputState">Đến</label>
+                                        <select id="inputState" class="form-control" name="end">
+                                            <option value="1000000">1.000.000 đ</option>
+                                            <option value="2000000">2.000.000 đ</option>
+                                            <option value="3000000">3.000.000 đ</option>
+                                            <option value="4000000">4.000.000 đ</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-large btn-block btn-outline-secondary btn-radius-5 cursor-pointer">Tìm kiếm</button>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="inputState">Đến</label>
-                                    <select id="inputState" class="form-control">
-                                        <option selected>1.000.000 đ</option>
-                                        <option>1.000.000 đ</option>
-                                        <option>1.000.000 đ</option>
-                                        <option>1.000.000 đ</option>
-                                        <option>1.000.000 đ</option>
-                                        <option>1.000.000 đ</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <button type="button" class="btn btn-large btn-block btn-outline-secondary btn-radius-5 cursor-pointer">Tìm kiếm</button>
-                                </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
                 </div>

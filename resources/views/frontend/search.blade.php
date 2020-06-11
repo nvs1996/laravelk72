@@ -15,23 +15,6 @@
                 <div class="grid-list-product-wrapper">
                     <div class="product-view product-grid">
                         <div class="row">
-                            <!-- @foreach ($products as $product)
-                                <div class="product-width col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                                    <div class="product-wrapper mb-10">
-                                        <div class="product-img">
-                                            <a href="product/detail/{{ $product->id }}">
-                                                <img src="{{asset('public/backend/img/')}}/<?php echo $product->img ?>" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="product-content">
-                                            <h4><a href="product/detail/{{ $product->id }}">{{ $product->name }}</a></h4>
-                                            <div class="product-price">
-                                                <span class="new">{{number_format( $product->price,0,'',',') }} đ</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            @endforeach -->
                             @foreach ($products as $product)
                                 <div class="product-width col-lg-6 col-xl-4 col-md-6 col-sm-6">
                                     <div class="product-wrapper mb-10">

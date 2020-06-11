@@ -30,7 +30,7 @@ Route::get('project','frontend\ProjectController@getProject')->name('project');
 Route::get('project-detail/{id}','frontend\ProjectController@GetProjectDetail')->name('project-detail');
 Route::get('lien-he','frontend\indexController@LienHe')->name('lien_he');
 Route::get('contact','frontend\indexController@GetIndex');
-Route::get('search','frontend\SearchController@GetKey')->name('search.product');
+Route::post('search','frontend\SearchController@GetKey')->name('search.product');
 Route::get('product_by_category/{id}','frontend\ProductByCategoryController@GetKey')->name('category.by.product');
 Route::group(['prefix' => 'product','namespace'=>'frontend'], function () {
     Route::get('','ProductController@GetProduct')->name('product');;

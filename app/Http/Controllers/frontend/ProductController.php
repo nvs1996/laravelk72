@@ -12,20 +12,20 @@ class ProductController extends Controller
     {
         if($request->category)
         {
-            $data['products']=category::find($request->category)->product()->where('img','<>','no-img.jpg')->paginate(12);
+            $data['products']=category::find($request->category)->product()->where('img','<>','no-img.jpg')->orderBy('price', 'ASC')->paginate(12);
         }
         else if($request->start)
         {
-            $data['products']=product::where('img','<>','no-img.jpg')->whereBetween('price', [$request->start, $request->end])->paginate(12);
+            $data['products']=product::where('img','<>','no-img.jpg')->whereBetween('price', [$request->start, $request->end])->orderBy('price', 'ASC')->paginate(12);
         }
         else if($request->value)
         {
-            $data['products']=values::find($request->value)->product()->where('img','<>','no-img.jpg')->paginate(12);
+            $data['products']=values::find($request->value)->product()->where('img','<>','no-img.jpg')->orderBy('price', 'ASC')->paginate(12);
         }
         else
         {
          
-            $data['products']=product::where('img','<>','no-img.jpg')->paginate(12);
+            $data['products']=product::where('img','<>','no-img.jpg')->orderBy('price', 'ASC')->paginate(12);
         }
         $data['category']=category::all();
         $data['attribute']=attribute::all();
